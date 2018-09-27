@@ -42,42 +42,40 @@ The analysis is performed by analysing jet constituents. In each event, the jets
   \label{eq:jtdefinition}
   \end{equation}
 
+It is commonly interpreted as a transverse kick with respect to the initial hard parton momentum that is given to a fragmenting particle during the fragmentation process. In other words, $\jt{}$ measures the momentum spread of the jet fragments around the jet axis. 
+
+In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
+
 The reconstructed jet axes are used for $j_T$ reference. Any track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$k_T$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. 
  
  The resulting $j_T$ distributions are unfolded using an iterative (gaussian) algorithm.  
 
  
-Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2} Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference.
+Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $j_T$. 
+
+The background obtained in this manner is subtracted from the inclusive $j_T$ distribution, which gives the resulting signal distribution.
  
- 
-%It is commonly interpreted as a transverse kick with respect to the initial hard parton momentum that is given to a fragmenting particle during the fragmentation process. In other words, $\jt{}$ measures the momentum spread of the jet fragments around the jet axis. In the analysis, results are presented in bins of the fragmentation variable $\xlong$ which is defined as the projection of the momentum of the associated to the trigger particle one, divided by the momentum of the trigger particle: 
-%  \begin{equation}
-%    \xlong = \frac{\vec{p}_{\mathrm{t}} \cdot \vec{p}_{\mathrm{a}}}{\vec{p}_{\mathrm{t}}^{2}} \,.
-%  \label{eq:xedefinition}
-%  \end{equation}
-%This is also illustrated in~\fig{fig:jtdefinition}. Because $\xlong$ is defined as a fraction of the trigger particle momentum, it is intuitive to define a three-dimensional near side with respect to the axis defined by the trigger momentum. The associated particle is defined to be in the near side if it is in the same hemisphere as the trigger particle:
-%  \begin{equation}
-%    \vec{p}_{\mathrm{t}} \cdot \vec{p}_{\mathrm{a}} > 0 \,.
-%    \label{eq:3Dnearside}
-%  \end{equation}
-%The results have been binned in $\xlong$ rather than associated particle transverse momentum ($\pt{a}$) because the definition of $\jt{}$ (\eq{eq:jtdefinition}) has an explicit $\pt{a}$ dependence. Bins in $\pt{a}$ would bias the results since pairs with larger $\jt{}$ are more likely to be in bins of larger $\pt{a}$. In the case of $\xlong$ this bias is not present, since $\xlong$ and $\jt{}$ measure momentum components along perpendicular axes. Another advantage for using $\xlong$ is that the relative $\pt{}$ of the associate particles with respect to trigger $\pt{}$ ($\pt{t}$) stays the same in different $\pt{t}$ bins. It was verified with a \textsc{Pythia}~8~\cite{introPythia81,introPythia82} Monash tune simulation that the average fraction of the leading parton momentum taken by the leading particle ($\mean{z_{\mathrm{t}}}$) varies less than 0.05 units inside the used $\xlong$ bins $0.2 < \xlong < 0.4$, $0.4 < \xlong < 0.6$, and $0.6 < \xlong < 1.0$, with lower $\pt{t}$ bins having slightly larger $\mean{z_{\mathrm{t}}}$ than higher bins.
-%  
-%  \begin{figure}
-%    \begin{center}
-%      \includegraphics[width = 0.30\textwidth]{figures/jtwithrightangle}
-%    \end{center}
-%    \caption{(Color online). Illustration of $\vjt{}$ and $\xlong$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the associated particle momentum, $\vec{p}_{\mathrm{a}}$, with respect to the trigger particle momentum, $\vec{p}_{\mathrm{t}}$. The fragmentation variable $\xlong$ is the projection of $\vec{p}_{\mathrm{a}}$ to $\vec{p}_{\mathrm{t}}$ divided by $p_{\mathrm{t}}$.}
-%    \label{fig:jtdefinition}
-%  \end{figure}
-%
-%The extracted $\jt{}$ distribution is of the form
-%\begin{equation}
-%  \frac{1}{N_{\mathrm{trigg}}} \frac{1}{\jt{}} \frac{\mathrm{d}N}{\mathrm{d}\jt{}} \left(\pt{t},\,\xlong,\,\jt{}\right)= C_{\mathrm{associated}}(\pt{a}) \, C_{\mathrm{Acc}}(\Delta\eta,\,\Delta\varphi) \, \frac{N_{\mathrm{pairs}}(\pt{t},\,\xlong,\,\jt{}) }{\jt{} \, N_{\mathrm{trigg}} \, \Delta \jt{}} \,,
-%  \label{eq:exactDistribution}
-%\end{equation}
+
+  
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width = 0.30\textwidth]{figures/jtwithrightangle}
+    \end{center}
+    \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the associated particle momentum, $\vec{p}_{\mathrm{a}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
+    \label{fig:jtdefinition}
+  \end{figure}
+
+
+The extracted $\jt{}$ distribution is of the form
+\begin{equation}
+  \frac{1}{N_{\mathrm{jet}}} \frac{1}{\jt{}} \frac{\mathrm{d}N}{\mathrm{d}\jt{}} \left(\pt{jet},\,\jt{}\right)= C_{\mathrm{associated}}(\pt{a}) \, \frac{N_{\mathrm{tracks}}(\pt{t},\,\xlong,\,\jt{}) }{\jt{} \, N_{\mathrm{trigg}} \, \Delta \jt{}} \,,
+ \label{eq:exactDistribution}
+\end{equation}
+
 %where $N_{\mathrm{trigg}}$ is the number of triggers, $N_{\mathrm{pairs}}(\pt{t},\,\xlong,\,\jt{})$ is the number of trigger-associated pairs, $\Delta \jt{}$ is the bin width of the used $\jt{}$ bin, $C_{\mathrm{associated}}(\pt{a})$ is the single track efficiency correction for the associated particle and $C_{\mathrm{Acc}}(\Delta\eta,\,\Delta\varphi)$ is the pair acceptance correction. The single track efficiency correction is estimated by Monte Carlo simulations of \textsc{Pythia}~6~\cite{pythiaBig}, \textsc{Pythia}~8 or DPMJET~\cite{dpmjet} events, using GEANT3~\cite{geant} detector simulation and event reconstruction. The pair acceptance correction is the inverse of the normalized mixed event distribution sampled at the corresponding $(\Delta\eta,\,\Delta\varphi)$ value. In the mixed event distribution, away-side particles must be included to properly correct for detector and acceptance effects.
 %
-%In this study, two distinct components are extracted from the $\jt{}$ distribution. A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. The squares show a nearly Gaussian distribution resulting from the case when the final-state shower is disabled. The circles are obtained when the final-state shower is enabled. A long tail is observed which was not seen in the case with final-state shower off. To estimate the QCD showering component, it is assumed that hadronization dominates at low $\jt{}$, and the distributions from the two simulations coincide at $\jt{} = 0$. This scaling is then applied, since without QCD splittings the partons hadronize at higher scale, producing more particles. With the subtraction of the "hadronization only" -distribution from the total one, the QCD showering part can be separated. This is represented by the diamond symbols in \fig{fig:componentsFromResonance}.
+In this study, two distinct components are extracted from the $\jt{}$ distribution. %A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. 
+%The squares show a nearly Gaussian distribution resulting from the case when the final-state shower is disabled. The circles are obtained when the final-state shower is enabled. A long tail is observed which was not seen in the case with final-state shower off. To estimate the QCD showering component, it is assumed that hadronization dominates at low $\jt{}$, and the distributions from the two simulations coincide at $\jt{} = 0$. This scaling is then applied, since without QCD splittings the partons hadronize at higher scale, producing more particles. With the subtraction of the "hadronization only" -distribution from the total one, the QCD showering part can be separated. This is represented by the diamond symbols in \fig{fig:componentsFromResonance}.
 %  
 %  \begin{figure}
 %    \begin{center}
@@ -225,7 +223,7 @@ This is also seen in the RMS values shown in the right hand side of fig. \ref{fi
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.55\textwidth]{figures/PlaceHolder.png}
+\includegraphics[width=0.55\textwidth]{figures/ToyMCLeadingJtTest_50M_events}
 \caption{Results of calculating $j_T$ with respect to the jet axis or the leading hadron. The assumption is that because the leading hadron is an imperfect estimate of the jet axis, low $j_T$ tracks should on average be shifted to higher $j_T$}
 \end{figure}
 
