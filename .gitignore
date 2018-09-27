@@ -1,0 +1,14 @@
+#Ignore files produced by latex
+jetjtPaperPreview.aux
+jetjtPaperPreview.bbl
+jetjtPaperPreview.blg
+jetjtPaperPreview.log
+jetjtPaperPreview.out
+jetjtPaperPreview.pdf
+jetjtPaperPreview.synctex.gz
+
+# Ignore .DS_Store, if mac accidentally generates this file
+.DS_Store
+
+# Ignore tagged versions, they can be retrieved from tags anyhow
+taggedVersions
