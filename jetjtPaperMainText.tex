@@ -48,7 +48,7 @@ In the analysis, results are presented in bins of the jet transverse momentum $p
 
 The reconstructed jet axes are used for $j_T$ reference. Any track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$k_T$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. 
  
- The resulting $j_T$ distributions are unfolded using an iterative (gaussian) algorithm.  
+The resulting $j_T$ distributions are unfolded using an iterative (gaussian) algorithm. The response matrix for the unfolding is obtained from a Pythia~\cite{} simulation. 
 
  
 Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $j_T$. 
@@ -66,15 +66,17 @@ The background obtained in this manner is subtracted from the inclusive $j_T$ d
   \end{figure}
 
 
-The extracted $\jt{}$ distribution is of the form
-\begin{equation}
-  \frac{1}{N_{\mathrm{jet}}} \frac{1}{\jt{}} \frac{\mathrm{d}N}{\mathrm{d}\jt{}} \left(\pt{jet},\,\jt{}\right)= C_{\mathrm{associated}}(\pt{a}) \, \frac{N_{\mathrm{tracks}}(\pt{t},\,\xlong,\,\jt{}) }{\jt{} \, N_{\mathrm{trigg}} \, \Delta \jt{}} \,,
- \label{eq:exactDistribution}
-\end{equation}
+After unfolding and background subtraction the resulting distribution are fitted with a 2 component function. Gaussian component for low $j_T$ and an inverse gamma component for high $j_T$. Gaussian is centered at $0$
 
-%where $N_{\mathrm{trigg}}$ is the number of triggers, $N_{\mathrm{pairs}}(\pt{t},\,\xlong,\,\jt{})$ is the number of trigger-associated pairs, $\Delta \jt{}$ is the bin width of the used $\jt{}$ bin, $C_{\mathrm{associated}}(\pt{a})$ is the single track efficiency correction for the associated particle and $C_{\mathrm{Acc}}(\Delta\eta,\,\Delta\varphi)$ is the pair acceptance correction. The single track efficiency correction is estimated by Monte Carlo simulations of \textsc{Pythia}~6~\cite{pythiaBig}, \textsc{Pythia}~8 or DPMJET~\cite{dpmjet} events, using GEANT3~\cite{geant} detector simulation and event reconstruction. The pair acceptance correction is the inverse of the normalized mixed event distribution sampled at the corresponding $(\Delta\eta,\,\Delta\varphi)$ value. In the mixed event distribution, away-side particles must be included to properly correct for detector and acceptance effects.
-%
-In this study, two distinct components are extracted from the $\jt{}$ distribution. %A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. 
+$$\frac{1}{N_{\mathrm{jets}}}\frac{dN}{j_T dj_T} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{j_T^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{j_T}}}{j_T^{B_4+1}}$$
+
+To achieve stable results he fitting is performed in two stesp. First each component is fitted separately. Gaussian component is fitted to the low end in $j_T$. Fitting the gaussian component to the entire distribution produces the same result. Inverse gamma component is fitted to $j_T$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed.
+
+After the getting we extract $\sqrt{j_T^2}$ (RMS) and yield values separately from each component.
+
+In this study, two distinct components are extracted from the $\jt{}$ distribution. 
+
+%A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. 
 %The squares show a nearly Gaussian distribution resulting from the case when the final-state shower is disabled. The circles are obtained when the final-state shower is enabled. A long tail is observed which was not seen in the case with final-state shower off. To estimate the QCD showering component, it is assumed that hadronization dominates at low $\jt{}$, and the distributions from the two simulations coincide at $\jt{} = 0$. This scaling is then applied, since without QCD splittings the partons hadronize at higher scale, producing more particles. With the subtraction of the "hadronization only" -distribution from the total one, the QCD showering part can be separated. This is represented by the diamond symbols in \fig{fig:componentsFromResonance}.
 %  
 %  \begin{figure}
