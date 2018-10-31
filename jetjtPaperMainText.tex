@@ -7,6 +7,19 @@
 %% main text
 \section{Introduction}
 \label{sec:introduction}
+Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can give insight into QCD phenomena, such as angular ordering~\cite{basicsofpqcd} and hadronization. In this study the fragmentation of partons is studied using the jet fragmentation transverse momentum, $\jt{}$, which is the perpendicular component of the momentum with respect to the momentum vector of the initial hard parton.
+
+Recently $\jt{}$ with two-particle correlations was studied at ALICE~\cite{ALICEjt}. Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR with $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC with $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}. Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron with $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC with $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
+
+Jet production in QCD can be thought of as two separate stages~\cite{eventGenerators}. After being produced in the hard scattering, partons reduce their high virtuality through emitting gluons. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronize into final-state particles through a non-perturbative process. 
+
+In practice these two stages happen at leas in part simultaneously. {\color{red} [Showering time vs hadronization time ]} Thus it is not a priori clear that the effect of these can be separated. However, two distinct components were identified in ALICE when studying $\jt{}$ with two-particle correlations~\cite{ALICEjt}.The goal of this study is to see if similar identification of components is possible in a full jet reconstruction based study. 
+
+In this paper, the $\jt{}$ distributions are studied by reconstructing the jets with jet algorithms~\cite{jetFinding}. The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum when compared to using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis.
+
+The study is performed on $\sqrtSnnE{5.02}$ $\pPb$ collisions. 
+
+This paper is structured as follows. The event and track selection together with the used data samples are described in Section~\ref{sec:experimentaldetails}. The analysis details are discussed in Section~\ref{sec:methods}, followed by the systematic uncertainty analysis in Section~\ref{sec:systematicerrors}. The obtained results are shown in Section~\ref{sec:results} and the observations are summarized in Section~\ref{sec:conclusions}.
 
 %Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can provide information about QCD color coherence phenomena, such as angular ordering~\cite{basicsofpqcd}, and constrain hadronization models. The transverse fragmentation of partons is often studied using the jet fragmentation transverse momentum, $\jt{}$, the momentum component of particles produced in the fragmentation perpendicular to the momentum vector of the hard parton initiating the fragmentation. Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR with $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC with $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}. Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron with $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC with $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
 %
@@ -16,7 +29,6 @@
 %
 %In this paper, the $\jt{}$ distributions are studied using two-particle correlations measured by the ALICE detector in $\sqrtSE{7}$ $\pp$ and $\sqrtSnnE{5.02}$ $\pPb$ collisions. The correlation approach is chosen as opposed to full jet reconstruction based on the discussion in Ref.~\cite{thorstenBiasProceedings,Renk:2011wp}, where it is argued that two-particle correlations are more sensitive to the soft and non-perturtabive parts of the jet fragmentation. This is important for the separation of the two $\jt{}$ components and in searching for cold nuclear matter effects.
 %
-%This paper is structured as follows. The event and track selection together with the used data samples are described in Section~\ref{sec:experimentaldetails}. The analysis details are discussed in Section~\ref{sec:methods}, followed by the systematic uncertainty analysis in Section~\ref{sec:systematicerrors}. The obtained results are shown in Section~\ref{sec:results} and the observations are summarized in Section~\ref{sec:conclusions}.
 
 \section{Experimental setup and data samples}
 \label{sec:experimentaldetails}
@@ -121,7 +133,23 @@ In this study, two distinct components are extracted from the $\jt{}$ distributi
 
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
-The systematic uncertainties in this analysis come from the background determination, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track 
+The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations in RMS and yield are below ??. 
+
+\begin{table}[htb]
+\begin{tabular}{l | c | r}
+Systematic & effect  & \\
+\hline
+Background & \\
+Unfolding & \\
+\hline
+\end{tabular}
+\end{table}
+
+
+....
+
+The different sources of systematic uncertainties were taken as uncorrelated and thus added in quadrature
+
 %
 %The systematic uncertainties considered for this analysis arise from the background determination, the signal fitting procedure and the cuts used to select the tracks. The uncertainties related to the tracking are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations of the RMS and yield are below 3~\% in most cases, but effects up to 17~\% are observed for the yield of the wide component. The tracking efficiency contributes to the uncertainty of the yields only. This uncertainty is estimated from the difference between data and simulation in the TPC-ITS track matching efficiency as is previously done in Refs.~\cite{spectrumReferencePp} and~\cite{spectrumReferencepPb}.  For $\pp$ this uncertainty is 5~\% and for $\pPb$ 4~\%. The effect where the subleading track is reconstructed as a leading track, because of detector inefficiencies, was studied using simulations and found to be negligible due to steep slope of the trigger spectrum.
 %
