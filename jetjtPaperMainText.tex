@@ -21,6 +21,19 @@ The study is performed on $\sqrtSnnE{5.02}$ $\pPb$ collisions.
 
 This paper is structured as follows. The event and track selection together with the used data samples are described in Section~\ref{sec:experimentaldetails}. The analysis details are discussed in Section~\ref{sec:methods}, followed by the systematic uncertainty analysis in Section~\ref{sec:systematicerrors}. The obtained results are shown in Section~\ref{sec:results} and the observations are summarized in Section~\ref{sec:conclusions}.
 
+%Jet fragmentation can be roughly separated in two stages. First the hard parton goes through the showering process. 
+%Virtuality of the hadron decreases through showering and when it's of the same order as lambda qcd, the partons go through the hadronization phase, where partons are converted into hadrons. Both of these stages affect the jT distribution.
+ 
+ %As non-perturbative processes these are hard to calculate from first principles, so usually we would use Monte Carlo generators to describe jet fragmentation. Two common generators are PYTHIA and HERWIG, which handle the processes somewhat differently. 
+ %Pythia 6 has pT ordered showers while Pythia 8 has rapidity ordered showers.
+ %showering, differences  . mention on the AO, also Q 
+ %Pythia uses a string model to perform the hadronization stage. HERWIG uses a cluster model. 
+ 
+ %There are some efforts to describe the showering process with pQCD. One such approach is the Next-to-modified-leading-logarithm-approximation, or NMLLA. In NMLLA the hadronization is handled by Local Parton-Hadron-Duality (LPHD).
+
+-parton-hadron duality vs Lund string model for hadronization process
+
+
 %Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can provide information about QCD color coherence phenomena, such as angular ordering~\cite{basicsofpqcd}, and constrain hadronization models. The transverse fragmentation of partons is often studied using the jet fragmentation transverse momentum, $\jt{}$, the momentum component of particles produced in the fragmentation perpendicular to the momentum vector of the hard parton initiating the fragmentation. Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR with $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC with $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}. Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron with $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC with $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
 %
 %Jet fragmentation in QCD consists of two different steps~\cite{eventGenerators}. After the hard scattering, partons go through a QCD induced showering step, where gluons are emitted and the high virtuality  of the parton is reduced. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronize into final-state particles through a non-perturbative process. Two distinct components, related to the showering and hadronization phases, can be identified from the measured $\jt{}$~distributions.
@@ -73,9 +86,8 @@ The resulting $j_T$ distributions are unfolded using an iterative (gaussian) al
 Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $j_T$. 
 
 The background obtained in this manner is subtracted from the inclusive $j_T$ distribution, which gives the resulting signal distribution.
- 
 
-  
+ 
   \begin{figure}
     \begin{center}
       \includegraphics[width = 0.30\textwidth]{figures/jtwithrightangle}
@@ -89,7 +101,7 @@ After unfolding and background subtraction the resulting distribution are fitted
 
 $$\frac{1}{N_{\mathrm{jets}}}\frac{dN}{j_T dj_T} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{j_T^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{j_T}}}{j_T^{B_4+1}}$$
 
-To achieve stable results he fitting is performed in two stesp. First each component is fitted separately. Gaussian component is fitted to the low end in $j_T$. Fitting the gaussian component to the entire distribution produces the same result. Inverse gamma component is fitted to $j_T$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed.
+To achieve stable results he fitting is performed in two steps. First each component is fitted separately. Gaussian component is fitted to the low end in $j_T$. Fitting the gaussian component to the entire distribution produces the same result. Inverse gamma component is fitted to $j_T$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed.
 
 After the getting we extract $\sqrt{j_T^2}$ (RMS) and yield values separately from each component.
 
@@ -133,22 +145,31 @@ In this study, two distinct components are extracted from the $\jt{}$ distributi
 
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
-The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations in RMS and yield are below ??. 
+The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
+
+The systematics in background estimation were studied using an alternative method to extract the background, mainly the random background method. The resulting uncertainty is below 5 \% for the wide component RMS and below 9\% for the narrow component RMS. 
+
+The systematics that arise from the unfolding procedure were estimated by performing the unfolding with two separate methods. The primary method in the analysis was the iterative unfolding method. As a secondary method an SVD unfolding method was performed on the data. In a PYTHIA closure test the true distribution was in general found to be between the unfolded distributions from the iterative and SVD method. The difference between the methods when unfolding data should give a reasonable estimate of the unfolding uncertainty. The resulting uncertainty is below 8\% for both wide and narrow component RMS.
+
+The different sources of systematic uncertainties were taken as uncorrelated and thus added in quadrature. The resulting uncertainty is 9 \% for the wide component RMS and 12 \% for the narrow component RMS. 
 
 \begin{table}[htb]
-\begin{tabular}{l | c | r}
-Systematic & effect  & \\
-\hline
-Background & \\
-Unfolding & \\
-\hline
-\end{tabular}
-\end{table}
+\centering
+\caption{Summary of systematic errors}
+\label{tab:systematics}
+\begin{tabular}{ l | c | r }
+  Systematic & Wide RMS & Narrow RMS \\
+    \hline			
+  Background & 5 \% & 9 \% \\
+  Unfolding & 8 \% & 8 \% \\
+  Tracking & ? \% & ? \% \\
+  Total & 9 \% & 12\% \\
+  \hline
+  \end{tabular}
+  \end{table}
 
+There is no tracking and no unfolding uncertainty in the Monte Carlo simulations. 
 
-....
-
-The different sources of systematic uncertainties were taken as uncorrelated and thus added in quadrature
 
 %
 %The systematic uncertainties considered for this analysis arise from the background determination, the signal fitting procedure and the cuts used to select the tracks. The uncertainties related to the tracking are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations of the RMS and yield are below 3~\% in most cases, but effects up to 17~\% are observed for the yield of the wide component. The tracking efficiency contributes to the uncertainty of the yields only. This uncertainty is estimated from the difference between data and simulation in the TPC-ITS track matching efficiency as is previously done in Refs.~\cite{spectrumReferencePp} and~\cite{spectrumReferencepPb}.  For $\pp$ this uncertainty is 5~\% and for $\pPb$ 4~\%. The effect where the subleading track is reconstructed as a leading track, because of detector inefficiencies, was studied using simulations and found to be negligible due to steep slope of the trigger spectrum.
@@ -179,7 +200,7 @@ The different sources of systematic uncertainties were taken as uncorrelated and
 %
 %The systematic uncertainty estimation is done also for the \textsc{Pythia} and Herwig simulations, which are compared to the data. As the same analysis method is used for simulations and data, also the same methods to estimate the systematic uncertainty can be applied. For the simulations, the uncertainty is estimated from the background determination and signal fitting. There is no tracking uncertainty in the simulations.
 
-\section{Results and discussions}
+\section{Results}
 \label{sec:results}
 
 Distributions of $j_T$ after unfolding and background subtraction are shown in fig. \ref{fig:jtdist}. The yield at low $j_T$ stays constant with increasing $p_{T,\mathrm{jet}}$. At high $j_T$ the yield increases and the distributions become wider. In part this is due to kinematical limits. Within a fixed cone the maximum $j_T$ depends on the track momentum. 
@@ -188,7 +209,7 @@ $$j_{T,\mathrm{max}} \approx R \cdot p_{T,track} $$
 
 With increasing jet $p_T$ the possible track momenta also increase.
 
-The $j_T$ distributions are well described by the two component model fit. 
+The distributions are fitted using a two component fit. An example of the fitted distribution is shown in figure \ref{fig:jtfit}. The $j_T$ distributions are well described by the two component model fit. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -199,30 +220,41 @@ The $j_T$ distributions are well described by the two component model fit.
 \end{center}
 \end{figure}
 
-The per jet yields and widths of the $\jt{}$ distributions are determined as a function of the transverse momentum of jet. The results are obtained from the area and RMS of the fits to the narrow and wide components of the $\jt{}$ distribution. The RMS $\left(\rms{\jt{}}\,\right)$ values for the narrow component are shown in \fig{fig:rmsgamma} with Pythia simulations. 
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.5\textwidth]{figures/results/JetConejTSignalFitNFin00JetPt06perconeBgBayes.pdf}
+%%python Python/DrawSignal.py CF_pPb_legotrain/legotrain_CF_pPb_1839_20180613_LHC13bcde.root 0 4 8
+%\caption{$j_T$ distributions in different jet $p_T$ bins.}
+%\label{fig:jtfit}
+%\end{center}
+%\end{figure}
 
-There is clear separation in the width of the wide and narrow components of the $j_T$ distributions. The RMS of the wide component is 3-4 times larger than the narrow component RMS. The wide component is assumed to correspond to the fragmentation part of jet formation and the narrow component is linked with the hadronisation phase.
+The per jet yields and widths of the $\jt{}$ distributions are determined as a function of the transverse momentum of jet. The results are obtained from the area and RMS of the fits to the narrow and wide components of the $\jt{}$ distribution. The RMS $\left(\rms{\jt{}}\,\right)$ values for the narrow component are shown in \fig{fig:rmsgamma} with comparison to Monte Carlo simulations. 
 
-The wide component RMS shows an increasing trend with increasing $p_{T,\mathrm{jet}}$, while the narrow component RMS stays roughly constant.
+There is clear separation in the width of the wide and narrow components of the $j_T$ distributions. The RMS of the wide component is 3-4 times larger than the narrow component RMS. The wide component is assumed to correspond to the fragmentation part of jet formation while the narrow component is linked with the hadronisation phase.
 
-Pythia describes well the RMS values in both the narrow and wide components. 
+The wide component RMS shows an increasing trend with increasing $p_{T,\mathrm{jet}}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.55\textwidth]{figures/results/RMSWithSystematics_Pythia}
-\caption{RMS and yield values extracted from the fits for the gaussian (narrow) and inverse gamma (wide) components}
-\label{fig:rmsgamma}
+Pythia describes well the RMS values in both the narrow and wide components. HERWIG... PYTHIA uses the Lund string model for hadronization while HERWIG uses a cluster model. It seems ...
 
-\end{center}
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.55\textwidth]{figures/results/RMSWithSystematics_Pythia}
+%\caption{RMS and yield values extracted from the fits for the gaussian (narrow) and inverse gamma (wide) components}
+%\label{fig:rmsgamma}
+%\end{center}
+%\end{figure}
+
+\begin{figure}[htp]
+\centering
+\subfigure[$\jt{}$ distribution with two component fitting]{\label{fig:jtfit} \includegraphics[width = 0.49\textwidth]{figures/results/JetConejTSignalFitNFin00JetPt06perconeBgBayes.pdf}}
+\subfigure[RMS and yield values extracted from the fits for the gaussian (narrow) and inverse gamma (wide) components]{\label{fig:rmsgamma} \includegraphics[width = 0.49\textwidth]{figures/results/RMSWithSystematics_Pythia}}
+\caption{}
+\label{fig:results}
 \end{figure}
 
 
-
-
-
-
-
-
+\FloatBarrier
 
 \subsection{Discussion}
 \begin{figure}[htb]
@@ -234,15 +266,11 @@ Pythia describes well the RMS values in both the narrow and wide components.
 \label{fig:DihadronComparison}
 \end{figure}
 
-Comparison to $j_T$ results from dihadron analysis ~\cite{ref} is shown in figure \ref{fig:DihadronComparison}. Trigger $p_T$ bins used in dihadron analysis are converted to jet $p_T$ bins using observed average jet $p_T$ values in leading track momentum bins. Simlarly jet $p_T$ bins are converted to $p_{T,\mathrm{trigger}}$ bins using average leading track $p_T$ values in $p_{T,\mathrm{jet}}$ bins.
+Comparison to $j_T$ results from dihadron analysis ~\cite{ALICEjt} is shown in figure \ref{fig:DihadronComparison}. Trigger $p_T$ bins used in dihadron analysis are converted to jet $p_T$ bins using observed average jet $p_T$ values in leading track momentum bins. Simlarly jet $p_T$ bins are converted to $p_{T,\mathrm{trigger}}$ bins using average leading track $p_T$ values in $p_{T,\mathrm{jet}}$ bins.
 
 The trends are similar in dihadron and jet $j_T$ results. Wide component RMS values tend to increase with increasing $p_{T,\mathrm{trigger}}$/$p_{T,\mathrm{jet}}$. Narrow component RMS increases slightly in dihadron analysis but not in jet $j_T$, WHY? (Depends on $x_{||}$ bin in dihadron)
 
 In general dihadron $j_T$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in fig \ref{fig:Rcomparison}. This should be the dominant factor.
-
-Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $j_T$ values are different. In practice the jet axis found by the jet finding algrorithm tends to minimize the average $j_T$ of jet constituents. Thus the yield at high $j_T$ is limited and the RMS values are smaller.
-
-
 
 \begin{figure}[htp]
 \centering
@@ -253,16 +281,19 @@ Additionally the leading track is an imperfect estimate of the jet/original part
 \end{figure}
 
 
-
-
 Effect of the $R$ parameter choice is studied in Pythia. Having a fixed cone puts hard limits on the possible $j_T$ values. Increasing the cone size loosens these limits and allows higher $j_T$ values. The results are shown in figure \ref{fig:Rcomparison}. Left hand side shows the $j_T$ distributions. There is very little change in low $j_T$ but at high $j_T$ the yield increases. 
 
 This is also seen in the RMS values shown in the right hand side of fig. \ref{fig:Rcomparison}, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $p_T$ larger $R$ parameter leads to larger RMS values, but at hight $p_{T,\mathrm{jet}}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
+
+Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $j_T$ values are different. In practice the jet axis found by the jet finding algrorithm tends to minimize the average $j_T$ of jet constituents. Thus the yield at high $j_T$ is limited and the RMS values are smaller.
+
+A PYTHIA study was performed where $j_T$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in figure \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.55\textwidth]{figures/results/JetVsLeadingRefConst.pdf}
 \caption{Results of calculating $j_T$ with respect to the jet axis or the leading hadron. The assumption is that because the leading hadron is an imperfect estimate of the jet axis, low $j_T$ tracks should on average be shifted to higher $j_T$}
+\label{fig:RefComparison}
 \end{figure}
 
 
@@ -339,6 +370,9 @@ This is also seen in the RMS values shown in the right hand side of fig. \ref{fi
 
 \section{Conclusions}
 \label{sec:conclusions}
+In this work two distinct $\jt{}$ components were extracted for narrow and wide contributions using jet reconstruction. RMS values for both components were obtained. The width of the wide component is found to increase for increasing $\pt{jet}$. This is in part explained by the changing kinematical limits when going to higher $\pt{jet}$ which allows higher $\pt{track}$. Additionally the larger phase space allows stronger parton splitting. The results are qualitatively compatible with previous studies that studied $\jt{}$ using two-particle correlations.
+
+
 
 %A new method to extract two distinct $\jt{}$ components for  a narrow (hadronization) and wide (QCD branching) contribution using two-particle correlations was presented in this work.  The RMS and per trigger yield were obtained for both components. The width of the narrow component shows only a weak dependence on the trigger particle transverse momentum and no difference between $\pp$ and $\pPb$ collisions. The results from this analysis are also qualitatively compatible with the previous ones at lower $\sqrt{s}$, measured by the PHENIX and the CCOR experiments. All of these observations support the universal hadronization expectation. The width of the wide component is found to increase for increasing $\pt{t}$ in all $\xlong$ bins. This can be explained by stronger parton splitting, which is allowed by a larger phase space. A similar argument can be used to explain why the wide component has not been previously observed at the ISR or at RHIC since the larger collision energy at the LHC increases phase space for QCD splittings. As there is no difference in the wide component RMS between $\pp$ and $\pPb$, cold nuclear matter effects do not play a large role in this kinematic regime. \textsc{Pythia}~8 and Herwig~7 simulations describe the widths for both components well, but both simulations overestimate the yield of the narrow component. These measurements could be used to further constrain the parameters in the models to better reproduce the data.
 %
