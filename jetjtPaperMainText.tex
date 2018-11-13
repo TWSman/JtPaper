@@ -49,13 +49,14 @@ The $\sqrtSnnE{5.02}$ $\pPb$ ($1.3 \cdot 10^{8}$ events, $\mathcal{L}_{\mathrm{i
 
 The analysis uses charged tracks that are reconstructed with the Inner Tracking System (ITS)~\cite{aliceITS} and the Time Projection Chamber (TPC)~\cite{aliceTPC}. These detectors are located inside the large solenoidal magnet, that provides a homogeneous magnetic field of $\unit{0.5}{T}$. Tracks within a pseudorapidity range $|\eta| < 0.9$ over the full azimuth can be reconstructed. The ITS is made up of the innermost Silicon Pixel Detector (SPD), the Silicon Drift Detector (SDD) and the outermost Silicon Strip Detector (SSD). Each of these consists of two layers. The TPC is a cylinder filled with gas. Gas is ionised along the path of charged particles. Liberated electrons drift towards the end plates of the cylinder where they are detected. Combining the information from the ITS and the TPC provides a resolution ranging from $1$ to $10\,\%$ for charged particles with momenta from $0.15$ to $100~\GeVc$. For tracks without the ITS information, the momentum resolution is comparable to that of ITS+TPC tracks below transverse momentum $\pt{} = 10~\GeVc$, but for higher momenta the resolution reaches $20\,\%$ at $\pt{} = 50~\GeVc$~\cite{alicePerformance,aliceBackgroundFluctuation}. 
 
-Neutral particles used in jet reconstruction are reconstructed by the Electromagnetic Calorimeter (EMCAL)~\cite{aliceEMCAL}. The EMCAL covers an area with a range of $|\eta| < 0.7$  in pseudorapidity and $ 110 \deg $ in azimuth. EMCAL is complimented with the Dijet Calorimeter (DCAL) and Photon Spectrometer (PHOS) that are situated opposite of the EMCAL and cover $ 60 \deg $ in azimuth with the same pseudorapidity range.
+Neutral particles used in jet reconstruction are reconstructed by the Electromagnetic Calorimeter (EMCAL)~\cite{Cortese:2008zza}. The EMCAL covers an area with a range of $|\eta| < 0.7$  in pseudorapidity and $ 100 \deg $ in azimuth. EMCAL is complimented with the Dijet Calorimeter (DCal)~\cite{DCAL} and Photon Spectrometer (PHOS)~\cite{PHOS} that are situated opposite of the EMCA. PHOS covers 70 degrees in azimuth and $\left| \eta \right| < 0.12$. The DCal is technologically identical to EMCal. The DCal coverage spans over 67 degrees in azimuth, but in pseudorapidity the mid region is occupied by the PHOS. In between PHOS and DCal active volumes, there is a gap of 10 cm. DCal is fully back-to-back with EMCal.
 
 The combination of charged tracks and neutral particles 
 Charged tracks with  $\pt{} > 0.15~\GeVc$ in the region $|\eta| < 0.7$ are used in jet reconstruction.
 
 
-EMCAL is also used to provide the jet trigger used in triggered datasets. The EMCAL trigger definition for the 2013 $\pPb$ collisions is .... 
+EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition for the 2013 $\pPb$ collisions is .... 
+
 
 The V0 detector~\cite{forwarddetectorsTdr} provides the information for event triggering. The V0 detector consists of two scintillator stations, one on each side of the interaction point, covering $-3.7 < \eta < -1.7$ (V0C) and $2.8 < \eta < 5.1$ (V0A). %For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0. 
 %The pseudorapidity coverage of the SPD is $|\eta| < 2$ in the first layer and $|\eta| < 1.5$ in the second layer. %Combining this with the acceptance of the V0, the particles are detected in the range $-3.7 < \eta < 5.1$. The minimum %bias trigger definition 
@@ -63,12 +64,14 @@ For the 2013 $\pPb$ collisions events are required to have signals in both V0A a
 
 %For the $\pp$ collisions, similar track cuts as in Ref.~\cite{ALICE:2011ac} are used: at least two hits in the ITS are required, one of which needs to be in the three innermost layers, and 70 hits out of 159 are required in the TPC. In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{2}{cm}$ in the beam direction. In the transverse direction, a $\pt{}$ dependent cut DCA $< \unit{0.0105}{cm} + \unit{0.035}{cm} \cdot \pt{}^{-1.1}$ is used, where $\pt{}$ is measured in units of $\GeVc$. These track cuts are tuned to minimize the contamination from secondary particles.
 
-For the $\pPb$ collisions the tracks are selected following the so called hybrid approach, which is described in detail in Ref.~\cite{hybridExplanation}. Tracks with at least one hit in the SPD and at least two hits in the whole ITS are always accepted. In addition, tracks with fewer than two hits in the ITS or no hits in the SPD are accepted, but only if an additional vertex constraint is fulfilled.In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{3.2}{cm}$ in the beam direction and smaller than $\unit{2.4}{cm}$ in the transverse direction. With this track selection, the azimuthal angle ($\varphi$) distribution is as uniform as possible, because it is not affected by dead regions in SPD. The momentum resolutions of the two classes of particles are comparable up to $\pt{} \approx 10\;\GeVc$, but after that, tracks without ITS requirements have a worse resolution~\cite{alicePerformance,aliceBackgroundFluctuation}.
+In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite{hybridExplanation}. In this method tracks with at least one hit in the SPD and at least two hits in the whole ITS are always accepted. In addition, tracks with fewer than two hits in the ITS or no hits in the SPD are accepted, but only if an additional vertex constraint is fulfilled. In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{3.2}{cm}$ in the beam direction and smaller than $\unit{2.4}{cm}$ in the transverse direction. This approach is not affected by dead regions ins SPD. Thus it produces an azimuthal angle ($\varphi$) distribution that is as uniform as possible. The momentum resolutions of the two classes of particles are comparable up to $\pt{} \approx 10\;\GeVc$, but after that, tracks without ITS requirements have a worse resolution~\cite{alicePerformance,aliceBackgroundFluctuation}.
 
 \section{Analysis method}
 \label{sec:methods}
 
-The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$k_T$ algorithm. The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
+The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$k_T$ algorithm. Jets are limited to $\left| \eta \right| < 0.25 $. In jet reconstruction both charged tracks with $p_T>0.15\,\GeVc$ and neutral cluster with $p_T>0.30\,\GeVc$ are considered. In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
+
+The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
   \begin{equation}
     \jt{} = \frac{|\vec{p}_{\mathrm{jet}} \times \vec{p}_{\mathrm{a}}|}{|\vec{p}_{\mathrm{jet}}|} \,.
   \label{eq:jtdefinition}
@@ -76,16 +79,11 @@ The analysis is performed by analysing jet constituents. In each event, the jets
 
 It is commonly interpreted as a transverse kick with respect to the initial hard parton momentum that is given to a fragmenting particle during the fragmentation process. In other words, $\jt{}$ measures the momentum spread of the jet fragments around the jet axis. 
 
-In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
-
-The reconstructed jet axes are used for $j_T$ reference. Any track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$k_T$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. 
+The reconstructed jet axis is used for $j_T$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$k_T$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are used only in jet reconstruction.
  
-The resulting $j_T$ distributions are unfolded using an iterative (gaussian) algorithm. The response matrix for the unfolding is obtained from a Pythia~\cite{} simulation. 
-
+The resulting $j_T$ distributions are unfolded using an iterative (gaussian) algorithm. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81} simulation. 
  
-Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $j_T$. 
-
-The background obtained in this manner is subtracted from the inclusive $j_T$ distribution, which gives the resulting signal distribution.
+Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $j_T$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $j_T$. The background obtained in this manner is subtracted from the unfolded inclusive $j_T$ distribution, which gives the resulting signal distribution.
 
  
   \begin{figure}
@@ -97,15 +95,21 @@ The background obtained in this manner is subtracted from the inclusive $j_T$ d
   \end{figure}
 
 
-After unfolding and background subtraction the resulting distribution are fitted with a 2 component function. Gaussian component for low $j_T$ and an inverse gamma component for high $j_T$. Gaussian is centered at $0$
+The resulting signal distribution are fitted with a 2 component function. Gaussian is used component for low $j_T$ and an inverse gamma component for high $j_T$. The gaussian is taken to have the center at $j_T = 0$. 
 
-$$\frac{1}{N_{\mathrm{jets}}}\frac{dN}{j_T dj_T} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{j_T^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{j_T}}}{j_T^{B_4+1}}$$
+$$\frac{1}{N_{\mathrm{jets}}}\frac{\mathrm{d}N}{j_T \mathrm{d}j_T} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{j_T^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{j_T}}}{j_T^{B_4+1}}$$
 
 To achieve stable results he fitting is performed in two steps. First each component is fitted separately. Gaussian component is fitted to the low end in $j_T$. Fitting the gaussian component to the entire distribution produces the same result. Inverse gamma component is fitted to $j_T$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed.
 
-After the getting we extract $\sqrt{j_T^2}$ (RMS) and yield values separately from each component.
+After getting the fit function we extract $\sqrt{\left<j_T^2\right>}$ (RMS) and yield values separately from each component. The narrow component RMS is
 
-In this study, two distinct components are extracted from the $\jt{}$ distribution. 
+$$\sqrt{\left<j_T^2\right>}=\sqrt{2}B_1,$$
+
+and the wide component RMS value is calculated as 
+
+$$\sqrt{\left<j_T^2\right>}=\frac{B_5}{\sqrt{\left(B_4-2\right)\left(B_4-3\right)}},$$
+
+where it is required that $B_4 > 3$.
 
 %A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. 
 %The squares show a nearly Gaussian distribution resulting from the case when the final-state shower is disabled. The circles are obtained when the final-state shower is enabled. A long tail is observed which was not seen in the case with final-state shower off. To estimate the QCD showering component, it is assumed that hadronization dominates at low $\jt{}$, and the distributions from the two simulations coincide at $\jt{} = 0$. This scaling is then applied, since without QCD splittings the partons hadronize at higher scale, producing more particles. With the subtraction of the "hadronization only" -distribution from the total one, the QCD showering part can be separated. This is represented by the diamond symbols in \fig{fig:componentsFromResonance}.
@@ -287,7 +291,7 @@ This is also seen in the RMS values shown in the right hand side of fig. \ref{fi
 
 Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $j_T$ values are different. In practice the jet axis found by the jet finding algrorithm tends to minimize the average $j_T$ of jet constituents. Thus the yield at high $j_T$ is limited and the RMS values are smaller.
 
-A PYTHIA study was performed where $j_T$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in figure \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
+A \textsc{Pythia} study was performed where $j_T$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in figure \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 \begin{figure}[htp]
 \centering
@@ -295,78 +299,6 @@ A PYTHIA study was performed where $j_T$ was calculated with respect to the lead
 \caption{Results of calculating $j_T$ with respect to the jet axis or the leading hadron. The assumption is that because the leading hadron is an imperfect estimate of the jet axis, low $j_T$ tracks should on average be shifted to higher $j_T$}
 \label{fig:RefComparison}
 \end{figure}
-
-
-%\subsection{Jussi}
-%
-%
-%The per trigger yields and widths of the $\jt{}$ distributions are determined as a function of the transverse momentum of trigger particle in the range $3 < \pt{t} < 15~\GeVc$ for three $\xlong$ bins $0.2 < \xlong < 0.4$, $0.4 < \xlong < 0.6$ and $0.6 < \xlong < 1.0$. The results are obtained from the area and RMS of the fits to the narrow and wide components of the $\jt{}$ distribution. The RMS $\left(\rms{\jt{}}\,\right)$ values for both components in different $\xlong$ bins from $\sqrtSE{7}$ $\pp$ and $\sqrtSnnE{5.02}$ $\pPb$ collisions are compared with \textsc{Pythia}~8 tune 4C~\cite{pythia4CTune} simulations with the same energies in \fig{fig:jtrms}. The narrow component results show only weak dependence on $\pt{t}$ in the lowest $\xlong$ bin and no dependence on $\pt{t}$ in the higher $\xlong$ bins. These behaviours is sometimes referred to as universal hadronization. There is also no difference between $\pp$ and $\pPb$ collisions. \textsc{Pythia}~8 simulations for the two energies give consistent results that are in agreement with data, within uncertainties.
-%
-%Comparing the three panels in \fig{fig:jtrms}, it can be seen that $\rms{\jt{}}$ is larger in higher $\xlong$ bins. Kinematically, if the opening angle is the same, larger associated momentum translates into larger $\jt{}$. Jets with larger momenta are known to be more collimated, but the net effect of these two might still increase $\mean{\jt{}}$. Also if the trigger particle is not perfectly aligned with the jet axis but there is non-negligible $\jt{}$ between these two axes, $\mean{\jt{}}$ will be widened more in the higher $\xlong$ bins.
-%
-%For the wide component, it can be seen that there is a rising trend in $\pt{t}$ in both $\pp$ and $\pPb$ collisions as well as in \textsc{Pythia}~8 simulations. This can be explained by the fact that higher $\pt{}$ partons are likely to have higher virtuality, which allows for more phase space for branching thereby increasing the width of the distribution. Seeing that \textsc{Pythia}~8 simulations at $\sqrtSE{7}$ and $\sqrtSE{5.02}$ are in agreement, no difference related to the collision energy is expected in the real data either. Taking this into account, the fact that the $\pp$ and $\pPb$ agree within the uncertainties suggests that there are no significant cold nuclear matter effects.
-%
-%  \begin{figure}[t]
-%    \begin{center}
-%      \includegraphics[width = 0.98\textwidth]{figures/results/jt_RMS_finalFormUniformTextSize}
-%    \end{center}
-%    \caption{(Color online). RMS values of the narrow and wide $\jt{}$ components. Results from $\pp$ collisions at $\sqrtSE{7}$ (circular symbols) and from $\pPb$ collisions at $\sqrtSnnE{5.02}$ (square symbols) are compared to \textsc{Pythia}~8 tune 4C simulations at $\sqrtSE{7}$ (short dashed line) and at $\sqrtSE{5.02}$ (long dashed line). Different panels correspond to different $\xlong$ bins with $0.2 < \xlong < 0.4$ on the left, $0.4 < \xlong < 0.6$ in the middle, and $0.6 < \xlong < 1.0$ on the right. The statistical errors are represented by bars and the systematic errors by boxes.}
-%    \label{fig:jtrms}
-%  \end{figure}
-%  
-%The results for the per trigger $\jt{}$ yield are presented in \fig{fig:jtyield}. The yield of the narrow component in data shows mostly no dependence on $\pt{t}$, with the exception of the lowest $\xlong$ bin where the yield rises with $\pt{t}$ for $\pt{t} < 8~\GeVc$. The trend in the \textsc{Pythia}~8 simulation is different though, the yield is decreasing as $\pt{t}$ grows. The simulation also overestimates the data for the yield of the narrow component. The discrepancy between the simulation and the data is around 50~\% in the lowest $\pt{t}$ and $\xlong$ bins. The overestimation of the yield was observed earlier in an underlying event analysis in $\pp$ collisions at $\sqrtS~=~0.9$ and $\unit{7}{TeV}$ \cite{ALICE:2011ac}.
-%
-%The yield of the wide component shows a rising trend as a function of $\pt{t}$. This is expected if more splittings happen at higher $\pt{t}$, which would also explain the trend for the width. \textsc{Pythia}~8 simulations are in good agreement with the data for the yield of the wide component.
-%  
-%  \begin{figure}[t]
-%    \begin{center}
-%      \includegraphics[width = 0.98\textwidth]{figures/results/jt_yield_finalFormUniformTextSize}
-%    \end{center}
-%    \caption{(Color online). Yields of the narrow and wide $\jt{}$ components. Results from $\pp$ collisions at $\sqrtSE{7}$ (circular symbols) and from $\pPb$ collisions at $\sqrtSnnE{5.02}$ (square symbols) are compared to \textsc{Pythia}~8 tune 4C simulations at $\sqrtSE{7}$ (short dashed line) and at $\sqrtSE{5.02}$ (long dashed line). Different panels correspond to different $\xlong$ bins with $0.2 < \xlong < 0.4$ on the left, $0.4 < \xlong < 0.6$ in the middle, and $0.6 < \xlong < 1.0$ on the right. The statistical errors are represented by bars and the systematic errors by boxes}
-%    \label{fig:jtyield}
-%  \end{figure}
-%  
-%A comparison of the $\rms{\jt{}}$ results with different event generators and tunes is presented in \fig{fig:jtRMSmcComparison}. In this figure, the narrow and wide component $\rms{\jt{}}$ for $\sqrtSE{7}$ $\pp$ collisions are compared to \textsc{Pythia}~8 tunes 4C and Monash~\cite{pythiaMonashTune}, and to Herwig~7~\cite{herwigManual,herwig7releaseNote} tune LHC-MB. Notice that the $\pp$ data points and \textsc{Pythia}~8 tune 4C curves are the same as in \fig{fig:jtrms}. The narrow component is best described by \textsc{Pythia}~8 tune 4C. The Monash tune is approximately 10~\% above the data and Herwig~7 has a stronger $\xlong$ dependence than \textsc{Pythia}~8 or data. For the wide component, both \textsc{Pythia}~8 tunes are compatible with the data for most of the considered intervals. Herwig~7 agrees well with the data in the lowest $\xlong$ bins. All three simulation curves overestimate the RMS at low $\pt{t}$ in the $0.6 < \xlong < 1.0$ bin. At high $\pt{t}$, the central values of Herwig are larger than the data for $ \xlong > 0.4$, but the results are still consistent within the uncertainties.
-%  
-%  \begin{figure}[t]
-%    \begin{center}
-%      \includegraphics[width = 0.98\textwidth]{figures/results/jt_RMS_finalFormComparisonUniformTextSize}
-%    \end{center}
-%    \caption{(Color online). RMS values of the narrow and wide $\jt{}$ components for $\pp$ collisions at $\sqrtSE{7}$ (circular symbols) compared to \textsc{Pythia}~8 tunes 4C (dashed line) and Monash (short dashed line), and Herwig~7 LHC-MB tune (long dashed line) at the same energies. Different panels correspond to different $\xlong$ bins with $0.2 < \xlong < 0.4$ on the left, $0.4 < \xlong < 0.6$ in the middle, and $0.6 < \xlong < 1.0$ on the right. The statistical errors are represented by bars and the systematic errors by boxes}
-%    \label{fig:jtRMSmcComparison}
-%  \end{figure}
-% 
-%The same \textsc{Pythia}~8 and Herwig~7 tunes are compared to the $\sqrtSE{7}$ $\pp$ yield in \fig{fig:jtyieldMcComparison}. Again, in this figure the $\pp$ and \textsc{Pythia}~8 tune 4C results are the same as in \fig{fig:jtyield}. For the narrow component, all the tunes overestimate the yield in most of the explored kinematic region. Herwig~7 shows a slightly better agreement with the data than \textsc{Pythia}~8. The relative uncertainties are quite large for the wide component and all the simulations are compatible with the data within the uncertainties in the lowest $\xlong$ bins. In the highest $\xlong$ bin, a small underestimation of the data is visible for all the simulations at mid-$\pt{t}$ and for Herwig also in the lowest $\pt{t}$ bins. 
-%  
-%  \begin{figure}[t]
-%    \begin{center}
-%      \includegraphics[width = 0.98\textwidth]{figures/results/jt_yield_finalFormComparisonUniformTextSize}
-%    \end{center}
-%    \caption{(Color online). Yields of the narrow and wide $\jt{}$ components for $\pp$ collisions at $\sqrtSE{7}$ (circular symbols) compared to \textsc{Pythia}~8 tunes 4C (dashed line) and Monash (short dashed line), and Herwig~7 LHC-MB tune (long dashed line) at the same energies. Different panels correspond to different $\xlong$ bins with $0.2 < \xlong < 0.4$ on the left, $0.4 < \xlong < 0.6$ in the middle, and $0.6 < \xlong < 1.0$ on the right. The statistical errors are represented by bars and the systematic errors by boxes}
-%    \label{fig:jtyieldMcComparison}
-%  \end{figure}
-%  
-%The narrow component $\rms{\jt{}}$ results from three $\xlong$ bins are compared to the earlier results from CCOR~\cite{firstjtmeasurement} and PHENIX~\cite{PHENIXjets} in \fig{fig:ancientCompare}. These experiments use different methods to extract $\jt{}$ from the data. In CCOR, $\jt{}$ is obtained from a fit to an away side $p_{\mathrm{out}}$ distribution, where $p_{\mathrm{out}}$ is the momentum component of a charged track going outside of the plane defined by the trigger particle and the beam axis. They use the fit function
-%\begin{equation}
-%\mean{|p_{\mathrm{out}}|}^{2} = 2 \mean{|k_{\mathrm{T}y}|}^{2} x_{\mathrm{E}}^{2} + \mean{|\jt{y}|}^{2}(1+x_{\mathrm{E}}^{2}) \,,
-%\label{eq:ccorjt}
-%\end{equation}
-%where $x_{\mathrm{E}} = -\vec{p}_{\mathrm{Ta}} \cdot \vec{p}_{\mathrm{Tt}} / |\pt{t}|^2$ and the fit parameter $k_{\mathrm{T}y}$ is the $y$-component of the transverse momentum of the partons entering the hard scattering. The $k_{\mathrm{T}y}$ parameter needs to be included in the formula, since CCOR only studies distributions on the away side. PHENIX calculates $\rms{\jt{}}$ from a Gaussian fit to the azimuthal angle distribution using the relation
-%\begin{equation}
-%\rms{\jt{}} \approx \sqrt{2} \frac{\pt{t} \pt{a}}{\sqrt{\pt{t}^2 + \pt{a}^2}} \sigma_{\mathrm{N}} \,,
-%\label{eq:phenixjt}
-%\end{equation}
-%where $\sigma_{\mathrm{N}}$ is the width of the fitted Gaussian. At the lower collision energies of ISR and RHIC, no evident wide component was observed in the data and thus only one component for $\jt{}$ was extracted by CCOR and PHENIX. This is connected to the current analysis given that especially at the lower energies the high-$\pt{}$ trigger particles are likely to have a high $\mean{z_{\mathrm{t}}}$. PHENIX reported in~\cite{PHENIXjets} that this value is $\mean{z_{\mathrm{t}}} \sim 0.6$. Since ISR had lower collision energy than RHIC, $\mean{z_{\mathrm{t}}}$ can not be lower in the CCOR experiment. In case the trigger particle takes most of the momentum of the leading parton, there is less phase space available for soft gluon radiation during the QCD showering phase. Thus, it appears that the dominant contribution to the particle yield comes from the hadronization part of the fragmentation, and the single component results may be compared to the narrow component results in this analysis.
-%
-%  \begin{figure}[t]
-%    \begin{center}
-%      \includegraphics[width = 0.5\textwidth]{figures/results/jtPhenixCcorCompare}
-%    \end{center}
-%    \caption{(Color online). Narrow component RMS in different $\xlong$ bins compared with lower beam energy single component results from PHENIX~\cite{PHENIXjets} and CCOR~\cite{firstjtmeasurement}.}
-%    \label{fig:ancientCompare}
-%  \end{figure}
-%
-%The PHENIX results are compatible with the ALICE results for bin $0.4 < \xlong < 0.6$ and the CCOR results are close to the ALICE results for bin $0.6 < \xlong < 1.0$. However, a comparison in the same bins is not possible because of the bias $\pt{a}$ selections induce for this analysis.
 
 \section{Conclusions}
 \label{sec:conclusions}
