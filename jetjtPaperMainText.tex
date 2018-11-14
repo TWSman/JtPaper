@@ -45,16 +45,14 @@ The analysis uses charged tracks that are reconstructed with the Inner Tracking 
 
 Neutral particles used in jet reconstruction are reconstructed by the Electromagnetic Calorimeter (EMCAL)~\cite{Cortese:2008zza}. The EMCAL covers an area with a range of $|\eta| < 0.7$  in pseudorapidity and $ 100 \deg $ in azimuth. EMCAL is complimented with the Dijet Calorimeter (DCal)~\cite{DCAL} and Photon Spectrometer (PHOS)~\cite{PHOS} that are situated opposite of the EMCA. PHOS covers 70 degrees in azimuth and $\left| \eta \right| < 0.12$. The DCal is technologically identical to EMCal. The DCal coverage spans over 67 degrees in azimuth, but in pseudorapidity the mid region is occupied by the PHOS. In between PHOS and DCal active volumes, there is a gap of 10 cm. DCal is fully back-to-back with EMCal.
 
-The combination of charged tracks and neutral particles 
-Charged tracks with  $\pt{} > 0.15~\GeVc$ in the region $|\eta| < 0.7$ are used in jet reconstruction.
+The combination of charged tracks with  $\pt{} > 0.15~\GeVc$ and neutral particles with $\pt{} > 0.30~\GeVc$ is used to construct jets. 
 
+The V0 detector~\cite{forwarddetectorsTdr} provides the information for event triggering. The V0 detector consists of two scintillator stations, one on each side of the interaction point, covering $-3.7 < \eta < -1.7$ (V0C) and $2.8 < \eta < 5.1$ (V0A). For the 2013 $\pPb$ collisions events are required to have signals in both V0A and V0C. This condition is used later offline to reduce the contamination of the data sample from beam-gas events by using the timing difference of the signal between the two stations~\cite{alicePerformance}.
 
-EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition for the 2013 $\pPb$ collisions is .... 
-
-
-The V0 detector~\cite{forwarddetectorsTdr} provides the information for event triggering. The V0 detector consists of two scintillator stations, one on each side of the interaction point, covering $-3.7 < \eta < -1.7$ (V0C) and $2.8 < \eta < 5.1$ (V0A). %For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0. 
+%For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0. 
 %The pseudorapidity coverage of the SPD is $|\eta| < 2$ in the first layer and $|\eta| < 1.5$ in the second layer. %Combining this with the acceptance of the V0, the particles are detected in the range $-3.7 < \eta < 5.1$. The minimum %bias trigger definition 
-For the 2013 $\pPb$ collisions events are required to have signals in both V0A and V0C. This condition is used later offline to reduce the contamination of the data sample from beam-gas events by using the timing difference of the signal between the two stations~\cite{alicePerformance}.
+
+EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either 10 \gev for the low threshold trigger or 20 \gev for the high threshold trigger in a $32\times32$ patch size.
 
 %For the $\pp$ collisions, similar track cuts as in Ref.~\cite{ALICE:2011ac} are used: at least two hits in the ITS are required, one of which needs to be in the three innermost layers, and 70 hits out of 159 are required in the TPC. In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{2}{cm}$ in the beam direction. In the transverse direction, a $\pt{}$ dependent cut DCA $< \unit{0.0105}{cm} + \unit{0.035}{cm} \cdot \pt{}^{-1.1}$ is used, where $\pt{}$ is measured in units of $\GeVc$. These track cuts are tuned to minimize the contamination from secondary particles.
 
@@ -63,7 +61,7 @@ In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite
 \section{Analysis method}
 \label{sec:methods}
 
-The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$k_T$ algorithm~\cite{antikt}. Jets are limited to $\left| \eta \right| < 0.25 $. In jet reconstruction both charged tracks with $\pt{}>0.15\,\GeVc$ and neutral cluster with $\pt{}>0.30\,\GeVc$ are considered. In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
+The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$\kt{}$ algorithm~\cite{antikt}. Jets are limited to $\left| \eta \right| < 0.25 $. In jet reconstruction both charged tracks with $\pt{}>0.15\,\GeVc$ and neutral cluster with $\pt{}>0.30\,\GeVc$ are considered. In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
 
 The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
   \begin{equation}
@@ -73,29 +71,32 @@ The jet fragmentation transverse momentum, $\jt{}$, is defined as the component 
 
 It is commonly interpreted as a transverse kick with respect to the initial hard parton momentum that is given to a fragmenting particle during the fragmentation process. In other words, $\jt{}$ measures the momentum spread of the jet fragments around the jet axis. 
 
-The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$k_T$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are used only in jet reconstruction.
+The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$\kt{}$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are used only in jet reconstruction.
  
-The resulting $\jt{}$ distributions are unfolded using an iterative (gaussian) algorithm. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81} simulation. 
+The resulting $\jt{}$ distributions are unfolded using an iterative (gaussian) algorithm. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81} simulation.
  
-Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $\jt{}$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $\jt{}$. The background obtained in this manner is subtracted from the unfolded inclusive $\jt{}$ distribution, which gives the resulting signal distribution.
-
- 
-  \begin{figure}
+   \begin{figure}
     \begin{center}
       \includegraphics[width = 0.30\textwidth]{figures/jtwithrightangle}
     \end{center}
     \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the associated particle momentum, $\vec{p}_{\mathrm{a}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
     \label{fig:jtdefinition}
   \end{figure}
+ 
+Background is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $\jt{}$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $\jt{}$. The background obtained in this manner is subtracted from the unfolded inclusive $\jt{}$ distribution, which gives the resulting signal distribution. To make sure there is no jet contribution in the background, any events with jets inside the perpendicular cone are not used for background estimation.
 
+ 
 
-The resulting signal distribution are fitted with a 2 component function. Gaussian is used component for low $\jt{}$ and an inverse gamma component for high $\jt{}$. The gaussian is taken to have the center at $\jt{} = 0$. 
+The resulting signal distribution are fitted with a 2 component function, which is shown in Eq.~\ref{eq:fit}. Gaussian distribution is used for low $\jt{}$ and an inverse gamma function is used for high $\jt{}$. The gaussian is taken to have the center at $\jt{} = 0$. In total this gives 5 parameters.
 
-$$\frac{1}{N_{\mathrm{jets}}}\frac{\mathrm{d}N}{\jt{} \mathrm{d}\jt{}} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{\jt{}^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{\jt{}}}}{\jt{}^{B_4+1}}$$
+\begin{equation}
+\frac{1}{N_{\mathrm{jets}}}\frac{\mathrm{d}N}{\jt{} \mathrm{d}\jt{}} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{\jt{}^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{\jt{}}}}{\jt{}^{B_4+1}}
+\label{eq:fit}
+\end{equation}
 
-To achieve stable results he fitting is performed in two steps. First each component is fitted separately. Gaussian component is fitted to the low end in $\jt{}$. Fitting the gaussian component to the entire distribution produces the same result. Inverse gamma component is fitted to $\jt{}$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed.
+To achieve stable results the fitting is performed in two steps. First each component is fitted separately. Gaussian component is fitted to the low end in $\jt{}$. Inverse gamma component is fitted to $\jt{}$ above 1. After getting the results from the individual fits they are combined into a single function with starting values from the individual results and an additional fit is performed. Fitting only the gaussian component to the entire distribution produces approximately the same result as the gaussian component in the two-component model.
 
-After getting the fit function we extract $\sqrt{\left<\jt{}^2\right>}$ (RMS) and yield values separately from each component. The narrow component RMS is
+After getting the fit function $\sqrt{\left<\jt{}^2\right>}$ (RMS) and yield values are  extracted   separately from each component. The narrow component RMS is
 
 $$\sqrt{\left<\jt{}^2\right>}=\sqrt{2}B_1,$$
 
@@ -143,7 +144,7 @@ where it is required that $B_4 > 3$.
 
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
-The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Sec.~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in Tab. \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
+The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Sec.~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in Table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
 
 The systematics in background estimation were studied using an alternative method to extract the background, mainly the random background method. The resulting uncertainty is below 5 \% for the wide component RMS and below 9\% for the narrow component RMS. 
 
