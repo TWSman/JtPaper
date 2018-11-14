@@ -15,11 +15,11 @@ Jet production in QCD can be thought of as two separate stages~\cite{eventGenera
 
 In practice these two stages happen at leas in part simultaneously. {\color{red} [Showering time vs hadronization time ]} Thus it is not a priori clear that the effect of these can be separated. However, two distinct components were identified in ALICE when studying $\jt{}$ with two-particle correlations~\cite{ALICEjt}.The goal of this study is to see if similar identification of components is possible in a full jet reconstruction based study. 
 
-In this paper, the $\jt{}$ distributions are studied by reconstructing the jets with jet algorithms~\cite{jetFinding}. The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum when compared to using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis.
+In this paper, the $\jt{}$ distributions are studied by reconstructing the jets with jet algorithms~\cite{antikt}. The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum when compared to using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis.
 
 The study is performed on $\sqrtSnnE{5.02}$ $\pPb$ collisions. 
 
-This paper is structured as follows. The event and track selection together with the used data samples are described in Section~\ref{sec:experimentaldetails}. The analysis details are discussed in Section~\ref{sec:methods}, followed by the systematic uncertainty analysis in Section~\ref{sec:systematicerrors}. The obtained results are shown in Section~\ref{sec:results} and the observations are summarized in Section~\ref{sec:conclusions}.
+This paper is structured as follows. The event and track selection together with the used data samples are described in Sec.~\ref{sec:experimentaldetails}. The analysis details are discussed in Sec.~\ref{sec:methods}, followed by the systematic uncertainty analysis in Sec.~\ref{sec:systematicerrors}. The obtained results are shown in Sec.~\ref{sec:results} and the observations are summarized in Sec.~\ref{sec:conclusions}.
 
 %Jet fragmentation can be roughly separated in two stages. First the hard parton goes through the showering process. 
 %Virtuality of the hadron decreases through showering and when it's of the same order as lambda qcd, the partons go through the hadronization phase, where partons are converted into hadrons. Both of these stages affect the jT distribution.
@@ -69,7 +69,7 @@ In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite
 \section{Analysis method}
 \label{sec:methods}
 
-The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$k_T$ algorithm. Jets are limited to $\left| \eta \right| < 0.25 $. In jet reconstruction both charged tracks with $p_T>0.15\,\GeVc$ and neutral cluster with $p_T>0.30\,\GeVc$ are considered. In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
+The analysis is performed by analysing jet constituents. In each event, the jets are reconstructed using FastJet~\cite{fastjet} and its anti-$k_T$ algorithm~\cite{antikt}. Jets are limited to $\left| \eta \right| < 0.25 $. In jet reconstruction both charged tracks with $p_T>0.15\,\GeVc$ and neutral cluster with $p_T>0.30\,\GeVc$ are considered. In the analysis, results are presented in bins of the jet transverse momentum $p_{T,\mathrm{jet}}$.
 
 The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
   \begin{equation}
@@ -149,11 +149,11 @@ where it is required that $B_4 > 3$.
 
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
-The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
+The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Sec.~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in Tab. \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
 
 The systematics in background estimation were studied using an alternative method to extract the background, mainly the random background method. The resulting uncertainty is below 5 \% for the wide component RMS and below 9\% for the narrow component RMS. 
 
-The systematics that arise from the unfolding procedure were estimated by performing the unfolding with two separate methods. The primary method in the analysis was the iterative unfolding method. As a secondary method an SVD unfolding method was performed on the data. In a PYTHIA closure test the true distribution was in general found to be between the unfolded distributions from the iterative and SVD method. The difference between the methods when unfolding data should give a reasonable estimate of the unfolding uncertainty. The resulting uncertainty is below 8\% for both wide and narrow component RMS.
+The systematics that arise from the unfolding procedure were estimated by performing the unfolding with two separate methods. The primary method in the analysis was the iterative unfolding method. As a secondary method an SVD unfolding method was performed on the data. In a \textsc{Pythia} closure test the true distribution was in general found to be between the unfolded distributions from the iterative and SVD method. The difference between the methods when unfolding data should give a reasonable estimate of the unfolding uncertainty. The resulting uncertainty is below 8\% for both wide and narrow component RMS.
 
 The different sources of systematic uncertainties were taken as uncorrelated and thus added in quadrature. The resulting uncertainty is 9 \% for the wide component RMS and 12 \% for the narrow component RMS. 
 
@@ -207,13 +207,13 @@ There is no tracking and no unfolding uncertainty in the Monte Carlo simulations
 \section{Results}
 \label{sec:results}
 
-Distributions of $j_T$ after unfolding and background subtraction are shown in fig. \ref{fig:jtdist}. The yield at low $j_T$ stays constant with increasing $p_{T,\mathrm{jet}}$. At high $j_T$ the yield increases and the distributions become wider. In part this is due to kinematical limits. Within a fixed cone the maximum $j_T$ depends on the track momentum. 
+Distributions of $j_T$ after unfolding and background subtraction are shown in Fig. \ref{fig:jtdist}. The yield at low $j_T$ stays constant with increasing $p_{T,\mathrm{jet}}$. At high $j_T$ the yield increases and the distributions become wider. In part this is due to kinematical limits. Within a fixed cone the maximum $j_T$ depends on the track momentum. 
 
 $$j_{T,\mathrm{max}} \approx R \cdot p_{T,track} $$
 
 With increasing jet $p_T$ the possible track momenta also increase.
 
-The distributions are fitted using a two component fit. An example of the fitted distribution is shown in figure \ref{fig:jtfit}. The $j_T$ distributions are well described by the two component model fit. 
+The distributions are fitted using a two component fit. An example of the fitted distribution is shown in Fig. \ref{fig:jtfit}. The $j_T$ distributions are well described by the two component model fit. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -239,7 +239,7 @@ There is clear separation in the width of the wide and narrow components of the 
 
 The wide component RMS shows an increasing trend with increasing $p_{T,\mathrm{jet}}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
-Pythia describes well the RMS values in both the narrow and wide components. HERWIG... PYTHIA uses the Lund string model for hadronization while HERWIG uses a cluster model. It seems ...
+\textsc{Pythia} describes well the RMS values in both the narrow and wide components. HERWIG... \textsc{Pythia} uses the Lund string model for hadronization while HERWIG uses a cluster model. It seems ...
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -270,28 +270,28 @@ Pythia describes well the RMS values in both the narrow and wide components. HER
 \label{fig:DihadronComparison}
 \end{figure}
 
-Comparison to $j_T$ results from dihadron analysis ~\cite{ALICEjt} is shown in figure \ref{fig:DihadronComparison}. Trigger $p_T$ bins used in dihadron analysis are converted to jet $p_T$ bins using observed average jet $p_T$ values in leading track momentum bins. Simlarly jet $p_T$ bins are converted to $p_{T,\mathrm{trigger}}$ bins using average leading track $p_T$ values in $p_{T,\mathrm{jet}}$ bins.
+Comparison to $j_T$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $p_T$ bins used in dihadron analysis are converted to jet $p_T$ bins using observed average jet $p_T$ values in leading track momentum bins. Simlarly jet $p_T$ bins are converted to $p_{T,\mathrm{trigger}}$ bins using average leading track $p_T$ values in $p_{T,\mathrm{jet}}$ bins.
 
 The trends are similar in dihadron and jet $j_T$ results. Wide component RMS values tend to increase with increasing $p_{T,\mathrm{trigger}}$/$p_{T,\mathrm{jet}}$. Narrow component RMS increases slightly in dihadron analysis but not in jet $j_T$, WHY? (Depends on $x_{||}$ bin in dihadron)
 
-In general dihadron $j_T$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in fig \ref{fig:Rcomparison}. This should be the dominant factor.
+In general dihadron $j_T$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in Fig. \ref{fig:Rcomparison}. This should be the dominant factor.
 
 \begin{figure}[htp]
 \centering
 \subfigure{ \includegraphics[width = 0.4\textwidth]{figures/results/RcomparisonSignalPt6080.pdf}}
 \subfigure{ \includegraphics[width = 0.4\textwidth]{figures/results/RcomparisonRMS.pdf}}
-\caption[Pythia $R$ parameters $j_T$]{Effect of changing $R$ parameter in jet finding on $j_T$ distributions}
+\caption[\textsc{Pythia} $R$ parameters $j_T$]{Effect of changing $R$ parameter in jet finding on $j_T$ distributions}
 \label{fig:Rcomparison}
 \end{figure}
 
 
-Effect of the $R$ parameter choice is studied in Pythia. Having a fixed cone puts hard limits on the possible $j_T$ values. Increasing the cone size loosens these limits and allows higher $j_T$ values. The results are shown in figure \ref{fig:Rcomparison}. Left hand side shows the $j_T$ distributions. There is very little change in low $j_T$ but at high $j_T$ the yield increases. 
+Effect of the $R$ parameter choice is studied in \textsc{Pythia}. Having a fixed cone puts hard limits on the possible $j_T$ values. Increasing the cone size loosens these limits and allows higher $j_T$ values. The results are shown in Fig. \ref{fig:Rcomparison}. Left hand side shows the $j_T$ distributions. There is very little change in low $j_T$ but at high $j_T$ the yield increases. 
 
-This is also seen in the RMS values shown in the right hand side of fig. \ref{fig:Rcomparison}, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $p_T$ larger $R$ parameter leads to larger RMS values, but at hight $p_{T,\mathrm{jet}}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
+This is also seen in the RMS values shown in the right hand side of Fig. \ref{fig:Rcomparison}, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $p_T$ larger $R$ parameter leads to larger RMS values, but at hight $p_{T,\mathrm{jet}}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
 
 Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $j_T$ values are different. In practice the jet axis found by the jet finding algrorithm tends to minimize the average $j_T$ of jet constituents. Thus the yield at high $j_T$ is limited and the RMS values are smaller.
 
-A \textsc{Pythia} study was performed where $j_T$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in figure \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
+A \textsc{Pythia} study was performed where $j_T$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 \begin{figure}[htp]
 \centering
