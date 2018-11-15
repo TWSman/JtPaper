@@ -52,7 +52,7 @@ The analysis is performed by analysing jet constituents. In each event, the jets
 
 The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
   \begin{equation}
-    \jt{} = \frac{|\vec{p}_{\mathrm{jet}} \times \vec{p}_{\mathrm{a}}|}{|\vec{p}_{\mathrm{jet}}|} \,.
+    \jt{} = \frac{|\vec{p}_{\mathrm{jet}} \times \vec{p}_{\mathrm{track}}|}{|\vec{p}_{\mathrm{jet}}|} \,.
   \label{eq:jtdefinition}
   \end{equation}
 
@@ -64,9 +64,9 @@ The resulting $\jt{}$ distributions are unfolded using an iterative (gaussian) 
  
    \begin{figure}
     \begin{center}
-      \includegraphics[width = 0.30\textwidth]{figures/jtwithrightangle}
+      \includegraphics[width = 0.60\textwidth]{figures/jt_def}
     \end{center}
-    \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the associated particle momentum, $\vec{p}_{\mathrm{a}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
+    \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the track momentum, $\vec{p}_{\mathrm{track}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
     \label{fig:jtdefinition}
   \end{figure}
  

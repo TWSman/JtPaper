@@ -12,3 +12,4 @@ jetjtPaperPreview.synctex.gz
 
 # Ignore tagged versions, they can be retrieved from tags anyhow
 taggedVersions
+versions/
