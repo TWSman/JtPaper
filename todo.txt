@@ -1,9 +1,8 @@
-13.11.2018: Update Analysis and Experiment Sections
--Introduction
--Abstract
-
+Paper draft ToDo:
+-Wait for comments
 
 Analysis ToDo:
 -Herwig
 -Tracking uncertainty
 -A/C side comparison
+-NMLLA comparison

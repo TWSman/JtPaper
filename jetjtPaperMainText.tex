@@ -1,6 +1,3 @@
-%%
-%% Start line numbering here if you want
-%%
 % !TEX root = jetjtPaperPreview.tex
 \linenumbers
 
@@ -26,16 +23,6 @@ The presence of a heavy nucleus as in p--A collisions might alter the fragmentat
 
 This paper is structured as follows. The event and track selection together with the used data samples are described in Sec.~\ref{sec:experimentaldetails}. The analysis details are discussed in Sec.~\ref{sec:methods}, followed by the systematic uncertainty analysis in Sec.~\ref{sec:systematicerrors}. The obtained results are shown in Sec.~\ref{sec:results} and the observations are summarized in Sec.~\ref{sec:conclusions}.
 
- 
-
-%Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can provide information about QCD color coherence phenomena, such as angular ordering~\cite{basicsofpqcd}, and constrain hadronization models. The transverse fragmentation of partons is often studied using the jet fragmentation transverse momentum, $\jt{}$, the momentum component of particles produced in the fragmentation perpendicular to the momentum vector of the hard parton initiating the fragmentation. Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR with $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC with $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}. Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron with $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC with $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
-%
-%Jet fragmentation in QCD consists of two different steps~\cite{eventGenerators}. After the hard scattering, partons go through a QCD induced showering step, where gluons are emitted and the high virtuality  of the parton is reduced. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronize into final-state particles through a non-perturbative process. Two distinct components, related to the showering and hadronization phases, can be identified from the measured $\jt{}$~distributions.
-%
-%The presence of a heavy nucleus as in p--A collisions might alter the fragmentation process. One possible mechanism for this is initial or final-state scattering of partons inside the nucleus. This is expected to lead to a broadening of jets, since the scattered partons are likely to deviate from their original direction~\cite{jetBroadeningPpb1}. Also the nuclear parton distribution functions can change the relative contributions of quarks and gluons compared to free nucleons, for example via gluon saturation and shadowing effects~\cite{introCgc,eps09}. Understanding the implications of these cold nuclear matter effects will provide an important baseline for similar measurements in heavy-ion collisions.
-%
-%In this paper, the $\jt{}$ distributions are studied using two-particle correlations measured by the ALICE detector in $\sqrtSE{7}$ $\pp$ and $\sqrtSnnE{5.02}$ $\pPb$ collisions. The correlation approach is chosen as opposed to full jet reconstruction based on the discussion in Ref.~\cite{thorstenBiasProceedings,Renk:2011wp}, where it is argued that two-particle correlations are more sensitive to the soft and non-perturtabive parts of the jet fragmentation. This is important for the separation of the two $\jt{}$ components and in searching for cold nuclear matter effects.
-%
 
 \section{Experimental setup and data samples}
 \label{sec:experimentaldetails}
@@ -106,42 +93,6 @@ $$\sqrt{\left<\jt{}^2\right>}=\frac{B_5}{\sqrt{\left(B_4-2\right)\left(B_4-3\rig
 
 where it is required that $B_4 > 3$.
 
-%A \textsc{Pythia}~8 simulation was performed to gain support for the separation of these components. To create a clean di-jet event sample, \textsc{Pythia}~8 was initialized to produce two hard gluons with a constant invariant mass for each event. The final-state QCD shower in \textsc{Pythia}~8 is modeled as a timelike shower, as explained in Ref.~\cite{newPythiaShower}. Two simulations were studied, one where the final-state shower was present and one where it was disabled. Without the final-state shower, the hadronization of the leading parton via Lund string fragmentation~\cite{lundString} develops without a QCD showering phase preceding it. When the final-state shower is allowed, the partons go through both showering and hadronization. The results of this study are presented in \fig{fig:componentsFromResonance}. 
-%The squares show a nearly Gaussian distribution resulting from the case when the final-state shower is disabled. The circles are obtained when the final-state shower is enabled. A long tail is observed which was not seen in the case with final-state shower off. To estimate the QCD showering component, it is assumed that hadronization dominates at low $\jt{}$, and the distributions from the two simulations coincide at $\jt{} = 0$. This scaling is then applied, since without QCD splittings the partons hadronize at higher scale, producing more particles. With the subtraction of the "hadronization only" -distribution from the total one, the QCD showering part can be separated. This is represented by the diamond symbols in \fig{fig:componentsFromResonance}.
-%  
-%  \begin{figure}
-%    \begin{center}
-%      \includegraphics[width = 0.65\textwidth]{figures/pythia_fitComponents_updatedDetails_pTt=6v0-8v0_xe=0v4-0v6}
-%    \end{center}
-%    \caption{(Color online). Results from a \textsc{Pythia}~8 study with a di-gluon initial state. The circular symbols are obtained when the final-state shower is enabled. The square symbols show the distribution without final-state showering. The diamond symbols representing soft radiation are obtained as a difference between the other two distributions. The distribution without final-state showering is fitted with a Gaussian and the soft radiation part with an inverse gamma function.}
-%    \label{fig:componentsFromResonance}
-%  \end{figure}  
-%  
-%This study shows a possible factorization of the showering and hadronization parts of the jet fragmentation in \textsc{Pythia}~8. Based on simulations, template fit functions for hadronization and showering components have been estimated and used to extract the corresponding terms from the data. Since $\vjt{}$ is a two-dimensional vector, using two-dimensional forms for the fit functions allows to extract the final results from the functions more easily. Assuming that there is no dependence on the polar angle of the vector, the angle can be integrated out and the distributions written as a function of the length of the vector. The hadronization part can be described by a Gaussian:
-%\begin{equation}
-%f_{G}(\jt{}) = \frac{A_{2}}{A_{1}^{2}} \, e^{-\frac{\jt{}^{2}}{2 A_{1}^{2}}},
-%\label{eq:gauss}
-%\end{equation}
-%and the showering part by an inverse gamma function of the form:
-%\begin{equation}
-%f_{IG}(\jt{}) = \frac{A_{3} \, A_{5}^{A_{4}-1}}{\Gamma(A_{4}-1)} \, \frac{e^{-\frac{A_{5}}{\jt{}}}}{\jt{}^{A_{4}+1}}\;,
-%\label{eq:inverseGamma}
-%\end{equation}  
-%where $A_{1\ldots5}$ are the free fit parameters. In this paper, the hadronization part will be called the narrow component and the showering part the wide component.
-%  
-%To determine the $\jt{}$ distribution in data, all charged particles inside each $\xlong$ bin are paired with the leading particle and $\jt{}$ is calculated for each of these pairs in an event. In the data, in addition to the signal, a background component mostly due to the underlying event is observed. Examples of measured $\jt{}$ distributions with background included and subtracted are presented in \fig{fig:jtdistribution}. An $\eta$-gap method is used to estimate the background contribution. Pairs with $|\Delta\eta| > 1.0$ are considered as background from the underlying event. The background templates for the analysis are built by randomizing the pseudorapidities for the trigger and the associated particles, following the inclusive charged particle pseudorapidity distributions. Twenty randomized pairs are generated from each background pair to improve the statistics for the background. The template histograms, generated in bins of $\pt{t}$ and $\xlong$, are then fitted to the $\jt{}$ distribution together with a sum of a Gaussian function and an inverse gamma function. It can be seen from \fig{fig:jtdistribution} that the fit is in good agreement with the data, except in the region around $\jt{} \sim 0.4~\GeVc$, where the data shows an increase with respect to the fit function. \textsc{Pythia} studies show that this structure is caused by correlations from neutral meson decays, dominated by decays of $\rho^{0}$ and $\omega$, where one of the decay daughters is the leading charged particle in the event. The effect of this structure is taken into account in the evaluation of the systematic uncertainties.
-%
-%  \begin{figure}
-%    \begin{center}
-%      \subfigure{ \includegraphics[width = 0.42\textwidth]{figures/jtdistribution_pp7v0TeV_GlobalSDD_bggausslevy_symbols_LPTrigg_C=0-100_ptt=6-8_xe=0v2-0v4_R=1v0_BG=0}}
-%      \subfigure{\includegraphics[width = 0.42\textwidth]{figures/jtsignal_pp7v0TeV_GlobalSDD_bggausslevy_symbols_LPTrigg_C=0-100_ptt=6-8_xe=0v2-0v4_R=1v0_BG=0}}
-%    \end{center}
-%    \caption{(Color online). \emph{Left:} Measured $\jt{}$ distribution including a three-component fit. The three components describe the background (x-symbols), hadronization (long dashed line), and showering (short dashed line). \emph{Right:} The same $\jt{}$ distribution but with background subtracted.}
-%    \label{fig:jtdistribution}
-%  \end{figure}
-%
-%The goal of the analysis is to determine the root-mean-square (RMS) values and yields of the narrow and wide $\jt{}$ components. These are calculated from the parameters of the fit functions in equations~\eqref{eq:gauss} and~\eqref{eq:inverseGamma}.
-
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
 The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Sec.~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in Table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude. 
@@ -173,31 +124,7 @@ There is no tracking and no unfolding uncertainty in the Monte Carlo simulations
 %
 %The systematic uncertainties considered for this analysis arise from the background determination, the signal fitting procedure and the cuts used to select the tracks. The uncertainties related to the tracking are estimated from variations of the track selection cuts defined in Section~\ref{sec:experimentaldetails}. The resulting variations of the RMS and yield are below 3~\% in most cases, but effects up to 17~\% are observed for the yield of the wide component. The tracking efficiency contributes to the uncertainty of the yields only. This uncertainty is estimated from the difference between data and simulation in the TPC-ITS track matching efficiency as is previously done in Refs.~\cite{spectrumReferencePp} and~\cite{spectrumReferencepPb}.  For $\pp$ this uncertainty is 5~\% and for $\pPb$ 4~\%. The effect where the subleading track is reconstructed as a leading track, because of detector inefficiencies, was studied using simulations and found to be negligible due to steep slope of the trigger spectrum.
 %
-%The main source of uncertainty from the background evaluation comes from the background region definition. As an alternative method to the default procedure, uncorrelated background templates are generated from particles with $R = \sqrt{\Delta\varphi^2 + \Delta\eta^2} > 1$ instead of those at large $\Delta\eta$, and pseudorapidities for the particle pairs are randomized together with azimuthal angles. The associated uncertainty is typically below 5~\%, but for the yield of the wide component the uncertainty can grow up to 46~\% in the lowest $\pt{t}$ and $\xlong$ bins where the signal to background ratio is the worst (0.84 for $\pp$ and 0.33 for $\pPb$). Changing the size of the $\eta$-gap produces small uncertainties compared to other sources, usually below 2~\%. The effect of changing the number of new pairs generated for the background from 20 to 15 or 25 was also checked, but this was found to be negligible and is not included in the total uncertainties.
-%
-%The dominant source of uncertainty results from decaying neutral mesons. Even though this is a physical correlation in the $\jt{}$ distribution, it cannot be attributed to QCD showering or hadronization. The effect of the decay mesons is estimated from a variation of the fit range, excluding the region where the data shows an increase with respect to the fit function. The excluded region is $0.25 < \jt{} < 0.45\,\GeVc$, $0.2 < \jt{} < 0.6\,\GeVc$ or $0.2 < \jt{} < 0.65\,\GeVc$ for the $\xlong$ bins  $0.2 < \xlong < 0.4$,  $0.4 < \xlong < 0.6$ and  $0.6 < \xlong < 1.0$, respectively. For the yield of the wide component the uncertainty can go up to 60~\% in the $0.4 < \xlong < 0.6$ bin at low $\pt{t}$. In most cases, this uncertainty is well below 10~\%. For the signal fit, the difference between fitting the background and the signal simultaneously and only the signal, after background subtraction, was evaluated. The uncertainty from this source was found to be typically smaller than 3~\%, which is small compared to other sources.
-%
-%The different sources of systematic uncertainties were considered as uncorrelated and added in quadrature accordingly. In general, the systematic uncertainties for the wide component are larger than for the narrow component, since the signal to background ratio is significantly smaller for the wide component. Also the uncertainties for the yield are larger than for the RMS. The uncertainties are also $\pt{t}$ and $\xlong$ dependent. For different results and datasets, the total systematic uncertainties vary within the ranges summarized in Tab.~\ref{tab:uncertainties}. The smallest uncertainty of $1.6$~\% for the narrow component RMS is found for the $0.2 < \xlong < 0.4$ and highest $\pt{t}$ bins while the largest uncertainty of 73~\% for the yield  of the wide component is found from the $0.4 < \xlong < 0.6$ and lowest $\pt{t}$ bins .
-%
-%\begin{table}
-%  \begin{center}
-%    \begin{tabular}{cccc}
-%      \toprule
-%                                             &       &\multicolumn{2}{c}{Total relative uncertainty} \\
-%                                             &       &      $\pp$        &      $\pPb$        \\
-%                                             \hline
-%        \multirow{ 2}{*}{Narrow component}   &  RMS  &  $1.6 - 6.2\,\%$  &   $1.6 - 8.5\,\%$  \\
-%                                             & yield &  $5.2 - 21\,\%$   &   $5.4 - 13\,\%$   \\
-%        \multirow{ 2}{*}{Wide component}     &  RMS  &  $1.9 - 7.4\,\%$  &   $3.0 - 14\,\%$   \\
-%                                             & yield &  $8.5 - 48\,\%$   &   $13  - 73\,\%$   \\
-%        \bottomrule
-%    \end{tabular}
-%  \end{center}
-%  \caption{Total systematic uncertainties for RMS and yield of the narrow and wide components in $\pp$ and $\pPb$ collisions. The ranges reflect $\pt{t}$ and $\xlong$ dependence of the studied observables.}
-%  \label{tab:uncertainties}
-%\end{table} 
-%
-%The systematic uncertainty estimation is done also for the \textsc{Pythia} and Herwig simulations, which are compared to the data. As the same analysis method is used for simulations and data, also the same methods to estimate the systematic uncertainty can be applied. For the simulations, the uncertainty is estimated from the background determination and signal fitting. There is no tracking uncertainty in the simulations.
+
 
 \section{Results}
 \label{sec:results}
@@ -234,7 +161,7 @@ There is clear separation in the width of the wide and narrow components of the 
 
 The wide component RMS shows an increasing trend with increasing $p_{T,\mathrm{jet}}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
-\textsc{Pythia} describes well the RMS values in both the narrow and wide components. Herwig... \textsc{Pythia} uses the Lund string model for hadronization while Herwig uses a cluster model. It seems ...
+\textsc{Pythia} describes well the RMS values in both the narrow and wide components. Herwig...({\color{red} insert observations from Herwgig}) \textsc{Pythia} uses the Lund string model for hadronization while Herwig uses a cluster model. It seems ... 
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -301,6 +228,3 @@ In this work two distinct $\jt{}$ components were extracted for narrow and wide 
 
 
 
-%A new method to extract two distinct $\jt{}$ components for  a narrow (hadronization) and wide (QCD branching) contribution using two-particle correlations was presented in this work.  The RMS and per trigger yield were obtained for both components. The width of the narrow component shows only a weak dependence on the trigger particle transverse momentum and no difference between $\pp$ and $\pPb$ collisions. The results from this analysis are also qualitatively compatible with the previous ones at lower $\sqrt{s}$, measured by the PHENIX and the CCOR experiments. All of these observations support the universal hadronization expectation. The width of the wide component is found to increase for increasing $\pt{t}$ in all $\xlong$ bins. This can be explained by stronger parton splitting, which is allowed by a larger phase space. A similar argument can be used to explain why the wide component has not been previously observed at the ISR or at RHIC since the larger collision energy at the LHC increases phase space for QCD splittings. As there is no difference in the wide component RMS between $\pp$ and $\pPb$, cold nuclear matter effects do not play a large role in this kinematic regime. \textsc{Pythia}~8 and Herwig~7 simulations describe the widths for both components well, but both simulations overestimate the yield of the narrow component. These measurements could be used to further constrain the parameters in the models to better reproduce the data.
-%
-%An interesting follow-up study would be to look at the same measurement in heavy-ion collisions. As it is shown that there are no cold nuclear matter effects in $\pPb$ $\jt{}$ distributions, any modifications in the distributions could be attributed to final-state effects, such as partonic energy loss in the quark-gluon plasma. The wide component might be able to discriminate between different jet shape modification mechanisms in $\PbPb$ collisions, like interactions with the plasma~\cite{jetBroadeningAA}, color decoherence effects~\cite{antiangularOrdering}, and changes in relative quark and gluon jet fractions~\cite{jetShapeQGP}.
