@@ -33,6 +33,7 @@ Thanks a lot first of all for your nice undertaking of paper writing. Please fin
  Abstract: proton-lead --> proton-lead (pA)
  Abstract: Jets from jet reconstruction with 40<p_T,jet<150 were used for the calculation --> Jets in 40<p_T,jet<150 reconstructed by the anti-kT algorithm were used for the calculation of the jet fragmentation transverse momentum ($j_\mathrm{T}$). 
   
+  DONE
   L3: Doesn't QCD need to be cited? You may start the first QCD word by the full name (Quantum ChromoDynamics (QCD))   DONE
   L4: In this study, the fragmentation of partons is studied    --> In this work, the fragmentation of partons is studied DONE
   L8~13: with pp collisions --> in pp collisions (also please modify for other lines from "with" to "in") DONE
@@ -44,7 +45,7 @@ Thanks a lot first of all for your nice undertaking of paper writing. Please fin
   L67: are situated opposite of the EMCA --> are situated in the opposite side of the EMCAL in azimuth. DONE
   L74: scintillator stations -> scintillator hodoscopes that are located on either side of the interaction point along the beam direction. It covers the pseudorapidity region ~~~. DONE
   L82~, because you already referred to the method, you can avoid the detailed description of the Hybrid or make it compact like,  DONE
-  In p--Pb collisions the tracks are selected to satisfy the hybrid approach~\cite[24], which ensures a uniform distribution of tracks as a function of azimuthal angle (\varphi). 
+  In p--Pb collisions the tracks are selected to satisfy the hybrid approach~\cite[24], which ensures a uniform distribution of tracks as a function of azimuthal angle (\varphi).  DONE
 
   L92: In each event --> In each collisional event, DONE
   L93 and its anti-kT algorithm --> FastJet with the anti-Kt algorithm~\cite[14]. DONE
