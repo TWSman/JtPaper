@@ -4,7 +4,7 @@
 %% main text
 \section{Introduction}
 \label{sec:introduction}
-Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can give insight into Quantum Chromodynamics (QCD)~\cite{gross1973ultraviolet, politzer1973reliable, gross1973asymptotically, gross1974asymptotically, georgi1974electroproduction}. phenomena, such as angular ordering~\cite{basicsofpqcd} and hadronisation. In this work the fragmentation of partons is studied using the jet fragmentation transverse momentum, $\jt{}$, which is the perpendicular component of the momentum with respect to the momentum vector of the initial hard parton.
+Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can give insight into Quantum Chromodynamics (QCD)~\cite{gross1973ultraviolet, politzer1973reliable, gross1973asymptotically, gross1974asymptotically, georgi1974electroproduction}. phenomena, such as angular ordering~\cite{basicsofpqcd} and hadronisation~\cite{???}. In this work the fragmentation of partons is studied using the jet fragmentation transverse momentum, $\jt{}$, which is the perpendicular component of the momentum with respect to the momentum vector of the initial hard parton.
 
 Recently $\jt{}$ with two-particle correlations was studied at ALICE~\cite{ALICEjt}. Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR in $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC in $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}. Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron in $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC in $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
 
@@ -17,7 +17,7 @@ As non-perturbative processes these are hard to calculate from first principles.
 
 These two MC generators handle both the showering process and hadronisation differently. Pythia uses the Lund string model~\cite{lundString} to perform the hadronisation stage. Herwig uses a cluster model for the hadronisation. Pythia 6 has $\pt{}$ ordered showers while Pythia 8 has rapidity ordered showers. Herwig simulates parton showers using the coherent branching algorithm of~\cite{Gieseke:2003rz}. This algorithm has angular ordering as a central feature. In \textsc{Pythia} 8 angular ordering is built in, while in \textsc{Pythia} 6 it can be turned on or off.
 
-In this paper, the $\jt{}$ distributions are studied by reconstructing the jets with jet algorithms~\cite{antikt} in $\sqrtSnnE{5.02}$ $\pPb$ collisions. The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum when compared to using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis. Additionally the kinematics of produced jets are different. In dihadron analysis, the results are done in $\pt{trigger}$ bins, which favours harder jets (leading track carries a large fraction of the momentum). When looking at $\pt{jet}$ bins softer jets are favoured.
+In this paper, the $\jt{}$ distributions are studied by reconstructing the jets with jet algorithms~\cite{antikt} in $\sqrtSnnE{5.02}$ $\pPb$ collisions. The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum when compared to using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis. Additionally the kinematics of produced jets are different. In dihadron analysis, the results are done in leading hadron momentum, $\pt{trigger}$ bins, which favours harder jets (leading track carries a large fraction of the momentum). When looking at $\pt{jet}$ bins softer jets are favoured.
 
 The presence of a heavy nucleus as in \pPb~collisions might alter the fragmentation process. One possible mechanism for this is initial or final-state scattering of partons inside the nucleus. However in dihadron analysis it was found that there is no difference in $\jt{}$ between $\pp$ and $\pPb$ collisions~\cite{ALICEjt}.
 
@@ -39,7 +39,7 @@ The V0 detector~\cite{forwarddetectorsTdr} provides the information for event tr
 %For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0. 
 %The pseudorapidity coverage of the SPD is $|\eta| < 2$ in the first layer and $|\eta| < 1.5$ in the second layer. %Combining this with the acceptance of the V0, the particles are detected in the range $-3.7 < \eta < 5.1$. The minimum %bias trigger definition 
 
-EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either 10 \gev for the low threshold trigger or 20 \gev for the high threshold trigger in a $32\times32$ patch size.
+EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either \unit[10]{\gev}  for the low threshold trigger or \unit[20]{\gev} for the high threshold trigger in a $32\times32$ patch size.
 
 %For the $\pp$ collisions, similar track cuts as in Ref.~\cite{ALICE:2011ac} are used: at least two hits in the ITS are required, one of which needs to be in the three innermost layers, and 70 hits out of 159 are required in the TPC. In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{2}{cm}$ in the beam direction. In the transverse direction, a $\pt{}$ dependent cut DCA $< \unit{0.0105}{cm} + \unit{0.035}{cm} \cdot \pt{}^{-1.1}$ is used, where $\pt{}$ is measured in units of $\GeVc$. These track cuts are tuned to minimize the contamination from secondary particles.
 
@@ -49,7 +49,7 @@ In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite
 \section{Analysis method}
 \label{sec:methods}
 
-The analysis is performed by analysing jet constituents. In each collision event, the jets are reconstructed using FastJet~\cite{fastjet} with the anti-$\kt{}$ algorithm~\cite{antikt}. Jets for R=0.4 are selected in $\left| \eta \right| < 0.25 $ to satisfy the fiducial acceptance of the EMCal.In jet reconstruction both charged tracks with $\pt{}>\unit[0.15]{\GeVc}$ and neutral cluster with $\pt{}>\unit[0.30]{\GeVc}$ are considered. In the analysis, results are presented in terms of the jet transverse momentum $\pt{jet}$.
+The analysis is performed by analysing jet constituents. In each collision event, the jets are reconstructed using FastJet~\cite{fastjet} with the anti-$\kt{}$ algorithm~\cite{antikt}. Jets for R=0.4 are selected in $\left| \eta \right| < 0.25 $ to satisfy the fiducial acceptance of the EMCal. In jet reconstruction both charged tracks with $\pt{}>\unit[0.15]{\GeVc}$ and neutral cluster with $\pt{}>\unit[0.30]{\GeVc}$ are considered. In the analysis, results are presented in terms of the jet transverse momentum $\pt{jet}$.
 
 The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
   \begin{equation}
@@ -61,7 +61,7 @@ It is commonly interpreted as a transverse kick with respect to the initial hard
 
 The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$\kt{}$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are used only in jet reconstruction.
  
-The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81} simulation.
+The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81}+GEANT~\cite{Geant2003,Geant2016} simulation.
  
    \begin{figure}
     \begin{center}
@@ -75,7 +75,7 @@ The underlying event is estimated by looking at an imaginary jet cone perpendicu
 
  
 
-The resulting signal distribution are fitted with a 2 component function shown in Eq.~\ref{eq:fit}. Gaussian distribution is used for low $\jt{}$ and an inverse gamma function is used for high $\jt{}$. The gaussian is taken to have the center at $\jt{} = 0$. In total this gives 5 parameters.
+The resulting signal distribution are fitted with a 2 component function shown in Eq.~\ref{eq:fit}. Gaussian distribution is used for low $\jt{}$ and an inverse gamma function is used for high $\jt{}$. The gaussian is taken to have the center at $\jt{} = 0$. In total this gives 5 parameters. ~\cite{ALICEjt}
 
 \begin{equation}
 \frac{1}{N_{\mathrm{jets}}}\frac{\mathrm{d}N}{\jt{} \mathrm{d}\jt{}} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{\jt{}^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{\jt{}}}}{\jt{}^{B_4+1}}
