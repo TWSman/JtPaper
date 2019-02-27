@@ -59,7 +59,9 @@ In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite
 
 The analysis is performed by analysing jet constituents. In each collision event, the jets are reconstructed using FastJet~\cite{fastjet} with the anti-$\kt{}$ algorithm~\cite{antikt}. Jets for R=0.4 are selected in $\left| \eta \right| < 0.25 $ to satisfy the fiducial acceptance of the EMCal. In jet reconstruction both charged tracks with $\pt{}>\unit[0.15]{\GeVc}$ and neutral cluster with $\pt{}>\unit[0.30]{\GeVc}$ are considered. In the analysis, results are presented in terms of the jet transverse momentum $\pt{jet}$.
 
-The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. The length of the $\vjt{}$ vector is
+The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$. 
+%The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}. 
+The length of the $\vjt{}$ vector is
   \begin{equation}
     \jt{} = \frac{|\vec{p}_{\mathrm{jet}} \times \vec{p}_{\mathrm{track}}|}{|\vec{p}_{\mathrm{jet}}|} \,.
   \label{eq:jtdefinition}
@@ -71,13 +73,13 @@ The reconstructed jet axis is used for $\jt{}$ reference. Any charged track wit
  
 The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81}+GEANT~\cite{Geant2003,Geant2016} simulation.
  
-   \begin{figure}
-    \begin{center}
-      \includegraphics[width = 0.60\textwidth]{figures/jt_def}
-    \end{center}
-    \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the track momentum, $\vec{p}_{\mathrm{track}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
-    \label{fig:jtdefinition}
-  \end{figure}
+%   \begin{figure}
+%    \begin{center}
+%      \includegraphics[width = 0.60\textwidth]{figures/jt_def}
+%    \end{center}
+%    \caption{Illustration of $\vjt{}$. The jet fragmentation transverse momentum, $\vjt{}$, is defined as the transverse momentum component of the track momentum, $\vec{p}_{\mathrm{track}}$, with respect to the jet momentum, $\vec{p}_{\mathrm{jet}}$.}
+%    \label{fig:jtdefinition}
+%  \end{figure}
  
 The underlying event is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $\jt{}$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $\jt{}$. The background obtained in this manner is subtracted from the unfolded inclusive $\jt{}$ distribution, which gives the resulting signal distribution. To make sure there is no jet contribution in the background, any events with jets inside the perpendicular cone are not used for background estimation.
 
