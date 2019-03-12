@@ -47,7 +47,7 @@ The V0 detector~\cite{forwarddetectorsTdr} provides the information for event tr
 %For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0.
 %The pseudorapidity coverage of the SPD is $|\eta| < 2$ in the first layer and $|\eta| < 1.5$ in the second layer. %Combining this with the acceptance of the V0, the particles are detected in the range $-3.7 < \eta < 5.1$. The minimum %bias trigger definition
 EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either \unit[10]{\gev}  for the low threshold trigger or \unit[20]{\gev} for the high threshold trigger in a $32\times32$ patch size.
-The Zero-Degree Calorimeters (ZDC)~\cite{PUDDU2007397} are located on both sides of ALICE at the farthest points ($|z|$~=~\unit[112.5]{cm}) from the interaction point along the beam line. They provide unbiased centrality information of pA and AA collision systems to ALICE using the energy measurement of spectator nucleons.
+The Zero-Degree Calorimeters (ZDC)~\cite{PUDDU2007397} are located on both sides of ALICE at the farthest points ($|z|$~=~\unit[112.5]{cm}) from the interaction point along the beam line. They provide unbiased centrality information of pA and AA collision systems to ALICE using the energy measurement of spectator nucleons~\cite{Adam:2014qja,Abelev:2013qoq}.
 
 
 %For the $\pp$ collisions, similar track cuts as in Ref.~\cite{ALICE:2011ac} are used: at least two hits in the ITS are required, one of which needs to be in the three innermost layers, and 70 hits out of 159 are required in the TPC. In addition, the distance of the closest approach (DCA) of the track to the primary vertex is required to be smaller than $\unit{2}{cm}$ in the beam direction. In the transverse direction, a $\pt{}$ dependent cut DCA $< \unit{0.0105}{cm} + \unit{0.035}{cm} \cdot \pt{}^{-1.1}$ is used, where $\pt{}$ is measured in units of $\GeVc$. These track cuts are tuned to minimize the contamination from secondary particles.
@@ -72,7 +72,7 @@ It is commonly interpreted as a transverse kick with respect to the initial hard
 
 The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$\kt{}$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are used only in jet reconstruction.
 
-The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81}+GEANT~\cite{Geant2003,Geant2016} simulation.
+The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81}+GEANT~\cite{Agostinelli:2002hh,Asai:2015xno} simulation.
 
 %   \begin{figure}
 %    \begin{center}
