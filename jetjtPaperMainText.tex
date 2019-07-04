@@ -108,25 +108,27 @@ where it is required that $B_4 > 3$.
 
 \section{Systematic uncertainties}
 \label{sec:systematicerrors}
-The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the cuts used to select the tracks. Tracking uncertainties are estimated from variations of the track selection cuts defined in Sec.~\ref{sec:experimentaldetails}. The resulting variations in RMS are shown in Table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude.
+The systematic uncertainties in this analysis come from the background estimation, the unfolding procedure and the uncertainties related to track and cluster selection. Tracking and cluster selection uncertainties are estimated through the use of \textsc{Pythia} simulations The resulting variations in RMS are shown in Table \ref{tab:systematics}. The uncertainties from unfolding and background subtraction are of the same magnitude.
 
 The systematics in background estimation were studied using an alternative method to extract the background, mainly the random background method. The resulting uncertainty is below 5\% for the wide component RMS and below 9\% for the narrow component RMS.
 
 The systematic uncertainty that arises from the unfolding procedure is estimated by performing the unfolding with two separate methods. Data corrected by the iterative unfolding method are used as the results and the SVD unfolding method is employed to estimate the uncertainty. In a \textsc{Pythia} closure test the true distribution was in general found to be between the unfolded distributions from the iterative and SVD method. The difference between the methods when unfolding data should give a reasonable estimate of the unfolding uncertainty. The resulting uncertainty is below 8\% for both wide and narrow component RMS.
 
-The different source of the systematic uncertainty are considered as uncorrelated and the values of each source are summed in quadrature. The resulting uncertainty is 9 \% for the wide component RMS and 12 \% for the narrow component RMS.
+The different source of the systematic uncertainty are considered as uncorrelated and the values of each source are summed in quadrature. The resulting uncertainty is 10 \% for the wide component RMS and 13 \% for the narrow component RMS.
+
 
 \begin{table}[htb]
 \centering
-\caption{Summary of systematic errors}
+\caption{Summary of systematic uncertainties}
 \label{tab:systematics}
 \begin{tabular}{ l | c | r }
   Systematic & Wide RMS & Narrow RMS \\
-    \hline
+    \hline			
   Background & 5 \% & 9 \% \\
   Unfolding & 8 \% & 8 \% \\
-  Tracking & ? \% & ? \% \\
-  Total & 9 \% & 12\% \\
+  Tracking & 4 \% & 5 \% \\ 
+  EMCal & 1 \% & 1 \% \\
+  Total & 10 \% & 13\% \\
   \hline
   \end{tabular}
   \end{table}
@@ -178,8 +180,8 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt4.pdf}
-\includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt6.pdf}
+\includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt5.pdf}
+\includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
 \caption{$\jt{}$ distribution with two component fitting}
 \label{fig:fits}
 \end{center}
