@@ -11,7 +11,7 @@ Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the
 %Recently $\jt{}$ with two-particle correlations was studied at ALICE~\cite{ALICEjt}.
 Jet production in QCD can be thought of as two separate stages~\cite{eventGenerators}. After being produced in the hard scattering, partons reduce their high virtuality through emitting gluons. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronize into final-state particles through a non-perturbative process.
 
-As non-perturbative processes these are hard to calculate from first principles. Instead Monte Carlo generators such as \textsc{Pythia}~\cite{introPythia81} and Herwig~\cite{herwig7releaseNote} are used to produce a theoretical background. One approach based on perturbative QCD (pQCD) is the Next-to-Modified Leading Log Approximation (NMLLA)~\cite{nmlla}. This approach implements local parton hadron duality (LPHD)~\cite{Azimov:1984np} instead of any sophisticated hadronisation model.
+As non-perturbative processes these are hard to calculate from first principles. Instead Monte Carlo generators such as \textsc{Pythia}~\cite{introPythia81} and Herwig~\cite{herwig7releaseNote} are used to produce a theoretical background. One approach based on perturbative QCD (pQCD) is the Next-to-Modified Leading Log Approximation (NMLLA)~\cite{nmlla}. This approach implements local parton hadron duality (LPHD)~\cite{Azimov:1984np} instead of a more sophisticated hadronisation model.
 
 These two MC generators handle both the showering process and hadronisation differently. Pythia uses the Lund string model~\cite{lundString} to perform the hadronisation stage. Herwig uses a cluster model for the hadronisation. Pythia 6 has $\pt{}$ ordered showers while Pythia 8 has rapidity ordered showers. Herwig simulates parton showers using the coherent branching algorithm of~\cite{Gieseke:2003rz}. This algorithm has angular ordering as a central feature. In \textsc{Pythia} 8 angular ordering is built in, while in \textsc{Pythia} 6 it can be turned on or off.
 
@@ -176,7 +176,7 @@ There is clear separation in the width of the wide and narrow components of the 
 
 The wide component RMS shows an increasing trend with increasing $\pt{jet}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
-\textsc{Pythia} describes well the RMS values in both the narrow and wide components. Herwig...({\color{red} insert observations from Herwgig}) \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. It seems ...
+\textsc{Pythia} describes well the RMS values in both the narrow and wide components. Herwig, on the other hand, gives $\jt{}$ distributions that are wider than the data. \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. However the narrow component, which is associated with the hadronisation, seems to be similar in both \textsc{Pythia} and Herwig and the difference is in the wide component, that is associated with the showering process.
 
 \begin{figure}[htb]
 \begin{center}
@@ -198,7 +198,7 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.65\textwidth]{figures/results/HighMJetConeJtSignalPtFrom4To5.pdf}
+\includegraphics[width=0.65\textwidth]{figures/results/HighMJetConeJtSignalPtFrom4To8.pdf}
 \caption{High multiplicity events}
 \label{fig:jt_highmult}
 \end{center}
