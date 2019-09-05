@@ -190,7 +190,7 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/results/jTwithSystematics.pdf}
-\caption{Final $\jt{}$ signal distributions with systematic uncertainties shown for different $\pt{jet}$ bins}
+\caption{Final $\jt{}$ signal distributions with systematic uncertainties shown for different $\pt{jet}$ bins. The distributions get wider with increasing $\pt{jet}$.}
 %Fig3_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
 \label{fig:jt_systematics}
 \end{center}
@@ -227,11 +227,11 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 
 %\subfigure{ \includegraphics[width = 0.42\textwidth]{figures/results/RMSWithSystematics_DihadronTriggerPt}}
 %\subfigure{ \includegraphics[width = 0.42\textwidth]{figures/results/RMSWithSystematics_DihadronJetPt}}
-\caption{Comparison of results with dihadron $\jt{}$ results. Dihadron trigger $\pt{}$ bins are converted to jet $\pt{}$  bins  using observed mean  $\pt{jet}$ values in $\pt{trigger}$ bins. Dihadron results are for $0.2 < x_{||} < 0.4$ }
+\caption{Comparison of results with dihadron $\jt{}$ results. Dihadron trigger $\pt{}$ bins are converted to jet $\pt{}$  bins  using observed mean  $\pt{jet}$ values in $\pt{trigger}$ bins. Dihadron results are for $0.2 < x_{||} < 0.4$, where $x_{||}$ is the ratio between the perpendicular component of the associated track and the trigger. }
 \label{fig:DihadronComparison}
 \end{figure}
 
-Comparison to $\jt{}$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. Simlarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
+Comparison to $\jt{}$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. %Similarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
 
 The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pt{trigger}$/$\pt{jet}$. Narrow component RMS increases slightly in dihadron analysis but not in jet $\jt{}$, WHY? (Depends on $x_{||}$ bin in dihadron)
 
@@ -250,9 +250,9 @@ Effect of the $R$ parameter choice is studied in \textsc{Pythia}. Having a fixed
 
 This is also seen in the RMS values shown in the right hand side of Fig. \ref{fig:Rcomparison}, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $\pt{}$ larger $R$ parameter leads to larger RMS values, but at hight $\pt{jet}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
 
-Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values are different. In practice the jet axis found by the jet finding algrorithm tends to minimize the average $\jt{}$ of jet constituents. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller.
+Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values are different. In practice the jet axis found by the jet finding algorithm tends to minimise the $\jt{}$ of jet constituents. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller.
 
-A \textsc{Pythia} study was performed where $\jt{}$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
+A naive \textsc{Pythia} study was performed where $\jt{}$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 \begin{figure}[htp]
 \centering
