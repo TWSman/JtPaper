@@ -148,13 +148,22 @@ With increasing jet $\pt{}$ the possible track momenta also increase.
 
 The distributions are fitted using a two component fit. An example of the fitted distribution is shown in Fig. \ref{fig:jtfit}. The $\jt{}$ distributions are well described by the two component model fit.
 
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.95\textwidth]{figures/results/MixedFullJetsR04JetConeJtSignalPtFrom4To8.pdf}
+%%python Python/DrawSignal.py CF_pPb_legotrain/legotrain_CF_pPb_1839_20180613_LHC13bcde.root 0 4 8
+%%Fig1_DrawSignal.py in https://github.com/TWSman/JtAnalysis
+%\caption{$\jt{}$ distributions in different jet $\pt{}$ bins.}
+%\label{fig:jtdist}
+%\end{center}
+%\end{figure}
+
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{figures/results/MixedFullJetsR04JetConeJtSignalPtFrom4To8.pdf}
-%python Python/DrawSignal.py CF_pPb_legotrain/legotrain_CF_pPb_1839_20180613_LHC13bcde.root 0 4 8
-%Fig1_DrawSignal.py in https://github.com/TWSman/JtAnalysis
-\caption{$\jt{}$ distributions in different jet $\pt{}$ bins.}
-\label{fig:jtdist}
+\includegraphics[width=0.8\textwidth]{figures/results/jTwithSystematics.pdf}
+\caption{Final $\jt{}$ signal distributions with systematic uncertainties shown for different $\pt{jet}$ bins. The distributions get wider with increasing $\pt{jet}$.}
+%Fig3_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
+\label{fig:jt_systematics}
 \end{center}
 \end{figure}
 
@@ -187,14 +196,7 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 \end{figure}
 
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{figures/results/jTwithSystematics.pdf}
-\caption{Final $\jt{}$ signal distributions with systematic uncertainties shown for different $\pt{jet}$ bins. The distributions get wider with increasing $\pt{jet}$.}
-%Fig3_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
-\label{fig:jt_systematics}
-\end{center}
-\end{figure}
+
 
 
 \begin{figure}[htb]
@@ -258,7 +260,7 @@ A naive \textsc{Pythia} study was performed where $\jt{}$ was calculated with re
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.55\textwidth]{figures/results/JetVsLeadingRefConst.pdf}
+\includegraphics[width=0.75\textwidth]{figures/results/JetVsLeadingRefConst.pdf}
 \caption{Results of calculating $\jt{}$ with respect to the jet axis or the leading hadron. The assumption is that because the leading hadron is an imperfect estimate of the jet axis, low $\jt{}$ tracks should on average be shifted to higher $\jt{}$}
 \label{fig:RefComparison}
 %Fig8_DrawSignalJtRef.py in https://github.com/TWSman/JtAnalysis\label{fig:Rcomparison}
