@@ -4,49 +4,49 @@
 %% main text
 \section{Introduction}
 \label{sec:introduction}
-Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can give insight into Quantum Chromodynamics (QCD)~\cite{gross1973ultraviolet, politzer1973reliable, gross1973asymptotically, gross1974asymptotically, georgi1974electroproduction} phenomena, such as angular ordering~\cite{basicsofpqcd} and the color-neutralization process known as hadronization~\cite{introPythia81,herwigManual,herwig7releaseNote}. In this work the fragmentation of partons is studied using the jet fragmentation transverse momentum, $\jt{}$, which is the perpendicular component of the momentum with respect to the momentum vector of the initial hard parton.
+Jets are collimated sprays of hadrons originating from the fragmentation of hard partons produced in high-energy particle collisions. Studying the jet fragmentation can give insight into Quantum Chromodynamics (QCD)~\cite{gross1973ultraviolet, politzer1973reliable, gross1973asymptotically, gross1974asymptotically, georgi1974electroproduction} phenomena, such as angular ordering~\cite{basicsofpqcd} and the colour-neutralisation process known as hadronisation~\cite{introPythia81,herwigManual,herwig7releaseNote}. In this work the fragmentation of partons is studied using the jet fragmentation transverse momentum, $\jt{}$, which is the perpendicular component of the momentum with respect to the momentum vector of the initial hard parton.
 
-Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR in $\pp$ collisions at center-of-mass energy $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC in $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}.
+Previously, $\jt{}$ has been studied using two-particle correlations by the CCOR collaboration at ISR in $\pp$ collisions at centre-of-mass energies $\sqrtS = 31,\;45$ and $63~\mathrm{GeV}$~\cite{firstjtmeasurement} and the PHENIX collaboration at RHIC in $\pp$ collisions at $\sqrtSE[GeV]{200}$~\cite{PHENIXjets} and d--Au collisions at center-of-mass energy per nucleon pair $\sqrtSnnE[GeV]{200}$~\cite{phenixJtPAu}.
 Jet measurements to study $\jt{}$ have been done by the CDF collaboration at the Tevatron in $\ppbar$ collisions at $\sqrtSE{1.96}$~\cite{cdfpaper} and the ATLAS collaboration at the LHC in $\PbPb$ collisions at $\sqrtSnnE{2.76}$~\cite{atlaksenJetit}.
 %Recently $\jt{}$ with two-particle correlations was studied at ALICE~\cite{ALICEjt}.
-Jet production in QCD can be thought of as two separate stages~\cite{eventGenerators}. After being produced in the hard scattering, partons reduce their high virtuality through emitting gluons. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronize into final-state particles through a non-perturbative process.
+Jet production in QCD can be thought of as two separate stages~\cite{eventGenerators}. After being produced in the hard scattering, partons reduce their high virtuality through emitting gluons. Since the transverse momentum scale ($Q^{2}$) is large during the showering, perturbative QCD calculations can be applied. When $Q^{2}$ becomes of the order of $\Lambda_{\mathrm{QCD}}$, partons hadronise into final-state particles through a non-perturbative process.
 
 As non-perturbative processes these are hard to calculate from first principles. Instead Monte Carlo generators such as \textsc{Pythia}~\cite{introPythia81} and Herwig~\cite{herwig7releaseNote} are used to produce a theoretical background. One approach based on perturbative QCD (pQCD) is the Next-to-Modified Leading Log Approximation (NMLLA)~\cite{nmlla}. This approach implements local parton hadron duality (LPHD)~\cite{Azimov:1984np} instead of a more sophisticated hadronisation model.
 
-These two MC generators handle both the showering process and hadronisation differently. Pythia uses the Lund string model~\cite{lundString} to perform the hadronisation stage. Herwig uses a cluster model for the hadronisation. Pythia 6 has $\pt{}$ ordered showers while Pythia 8 has rapidity ordered showers. Herwig simulates parton showers using the coherent branching algorithm of~\cite{Gieseke:2003rz}. This algorithm has angular ordering as a central feature. In \textsc{Pythia} 8 angular ordering is built in, while in \textsc{Pythia} 6 it can be turned on or off.
+These two MC generators handle both the showering process and hadronisation differently. \textsc{Pythia} uses the Lund string model~\cite{lundString} to perform the hadronisation stage. Herwig uses a cluster model for the hadronisation. \textsc{Pythia} 6 has $\pt{}$-ordered showers while \textsc{Pythia} 8 has rapidity-ordered showers. Herwig simulates parton showers using the coherent branching algorithm~\cite{Gieseke:2003rz}. This algorithm has angular ordering as a central feature. In \textsc{Pythia} 8 angular ordering is built in, while in \textsc{Pythia} 6 it can be turned on or off.
 
-Additionally jets are used as an important probe for the study of the deconfined phase of strongly interacting QCD matter, the quark-gluon plasma (QGP) that is created in high energy collisions of heavy nuclei.
+Additionally, jets are used as an important probe for the study of the deconfined phase of strongly interacting QCD matter, the quark-gluon plasma (QGP) that is created in high energy collisions of heavy nuclei.
 There exists plenty of experimental evidence of jet energy loss, such as the suppression of inclusive hadron spectra at high transverse momentum~\cite{Adcox:2001jp,Adams:2003im,Arsene:2003yk,Khachatryan:2016odn,Acharya:2018qsh}, the modification of back-to-back hadron-hadron~\cite{Adare:2007vu,Aamodt:2011vg} and direct photon-jet correlations~\cite{Adare:2012qi}, and the modification of reconstructed jet spectra~\cite{Adam:2015ewa} and jet substructure~\cite{Sirunyan:2018qec,Chatrchyan:2014ava,Acharya:2018uvf}, as compared to the expectations from elementary proton-proton collisions.
 
-Jet quenching in heavy-ion collisions evolves multi-scale problems~\cite{Kurkela:2014tla,Tachibana:2018yae}. The elementary scattering and the subsequent branching processes down to non-perturbative scales are dominated by hard scales in the vacuum as well as in the medium. Soft scales, of the order of the temperature of the medium, characterise the interactions of soft partons produced in the shower with the QGP. Soft scales also rule hadronisation, which is expected to take place in vacuum for sufficiently energetic probes, even though some modifications can persist from modifications of colour flow~\cite{Aurenche:2011rd,Beraudo:2011bh,Beraudo:2012bq}. Understanding the contributions from the different processes to the jet shower evolution in medium and their scale dependence is crucial to to constrain the dynamics of jet energy loss in the expending medium, the role of colour coherence~\cite{CasalderreySolana:2012ef}, and fundamental medium properties like temperature dependent transport coefficient~\cite{DEramo:2012uzl,Ayala:2016pvm}.
+Jet quenching in heavy-ion collisions evolves multi-scale problems~\cite{Kurkela:2014tla,Tachibana:2018yae}. The elementary scattering and the subsequent branching processes down to non-perturbative scales are dominated by hard scales in the vacuum as well as in the medium. Soft scales, of the order of the temperature of the medium, characterise the interactions of soft partons produced in the shower with the QGP. Soft scales also govern hadronisation, which is expected to take place in vacuum for sufficiently energetic probes, even though some modifications can persist from modifications of colour flow~\cite{Aurenche:2011rd,Beraudo:2011bh,Beraudo:2012bq}. Understanding the contributions from the different processes to the jet shower evolution in medium and their scale dependence is crucial to constrain the dynamics of jet energy loss in the expending medium, the role of colour coherence~\cite{CasalderreySolana:2012ef}, and fundamental medium properties like temperature-dependent transport coefficient~\cite{DEramo:2012uzl,Ayala:2016pvm}.
 
-The observed strong collective behavior suggests that the QGP is created in high multiplicity $\pp$ and \pA collisions~\cite{Abelev:2012ola,Aad:2012gla,Chatrchyan:2013nka,Khachatryan:2010gv,Khachatryan:2016txc,Aidala:2016vgl}, even though in order to reach a final conclusion more experimental and theoretical efforts are required. Jet production could be modified even if the collision system is small~\cite{Zhang:2013oca,Park:2016jap,TYWONIUK201485}, though no clear consensus on the magnitude of the quenching has been made. There had been no evidence of jet quenching in minimum bias collisions~\cite{Khachatryan:2016odn,ALICEjt}, i.e. averaged over all events.  However, in these small systems, the selection of event class based on multiplicity has strong autocorrelations between the nature of the nucleon-nucleon collisions and the hard process itself. This makes the interpretation of experimental observables complicated~\cite{Adam:2014qja, Adam:2016jfp,Nagle:2018nvi} because the measurements are limited on the cross section of high-\pt{} hadrons and jets to date.
+The observed strong collective behaviour suggests that the QGP is created in high multiplicity $\pp$ and pA collisions~\cite{Abelev:2012ola,Aad:2012gla,Chatrchyan:2013nka,Khachatryan:2010gv,Khachatryan:2016txc,Aidala:2016vgl}, even though more experimental and theoretical efforts are required in order to reach a final conclusion. Jet production could be modified even if the collision system is small~\cite{Zhang:2013oca,Park:2016jap,TYWONIUK201485}, though no clear consensus on the magnitude of the quenching has been made. There had been no evidence of jet quenching in minimum bias collisions~\cite{Khachatryan:2016odn,ALICEjt}, i.e. averaged over all events.  However, in these small systems, the selection of event class based on multiplicity has strong autocorrelation between the nature of the nucleon-nucleon collisions and the hard process itself. This makes the interpretation of experimental observables complicated~\cite{Adam:2014qja, Adam:2016jfp,Nagle:2018nvi} because the measurements are limited on the cross section of high-\pt{} hadrons and jets to date.
 
 % only done in minbias events and there are biases
 The results for $\jt{}$ distributions by using two-particle correlations were recently reported by the ALICE Collaboration~\cite{ALICEjt}.
-It was demonstrated that $\jt{}$ distributions have two distinct components related to the showering and hadronization phases.
-The advantage of jet reconstruction is that it should give a better estimate of the initial hadron momentum than the leading hadron when using two-particle correlations. Additionally the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis. Additionally the kinematics of produced jets are different. In two-particle correlations, the results are done in trigger particle momentum bins, which favored harder jets (leading track carries a large fraction of the momentum). When looking at jet momentum bins softer jets are favored.
+It was demonstrated that $\jt{}$ distributions have two distinct components related to the showering and hadronisation phases.
+The advantage of jet reconstruction is that it gives a better estimate of the initial hadron momentum than the leading hadron when using two-particle correlations. Additionally, the results are not smeared by the splitting of the leading hadron as was the case in the correlation study. The disadvantage is that the jet reconstruction limits the study to a small cone around the jet axis. In addition, the kinematics of produced jets is different. In two-particle correlations, the results are done in trigger particle momentum bins, which favored harder jets as a leading track carries a large fraction of the momentum. When looking at jet momentum bins softer jets are favored.
 
-In this paper, the $\jt{}$ distributions are studied by reconstructing the jets using the anti-$\kt{}$ algorithm~\cite{antikt} with resolution parameter $R=0.4$ in the pseudorapidity range $|\eta|<0.25$ in $\sqrtSnnE{5.02}$ $\pPb$ minimum bias and high multiplicity collisions.
+In this paper, the $\jt{}$ distributions are studied by reconstructing the jets using the anti-$\kt{}$ algorithm~\cite{antikt} with resolution parameter $R=0.4$ in the pseudorapidity range $|\eta|<0.25$ in $\pPb$ minimum bias and high multiplicity collisions at $\sqrtSnnE{5.02}$.
 Two distinct components are studied for various jet transverse momentum bins and event selections.
 We also present a comparison to \textsc{Pythia} and Herwig simulations.
 
-The experimental setup and measurements are described in Sec.~\ref{sec:experimentaldetails}. In Sec.~\ref{sec:methods} we present the analysis methods. The sources of systematic uncertainties are explained in Sec.~\ref{sec:systematicerrors}. The results of the measurements and comparisons to model calculations are presented in Sec.~\ref{sec:results}.
-Finally, Sec.~\ref{sec:summary} summarizes our new results.
+%The experimental setup and measurements are described in Sec.~\ref{sec:experimentaldetails}. In Sec.~\ref{sec:methods} we present the analysis methods. The sources of systematic uncertainties are explained in Sec.~\ref{sec:systematicerrors}. The results of the measurements and comparisons to model calculations are presented in Sec.~\ref{sec:results}.
+%Finally, Sec.~\ref{sec:summary} summarizes our new results.
 
 \section{Experimental setup and data samples}
 \label{sec:experimentaldetails}
-The $\sqrtSnnE{5.02}$ $\pPb$ ($1.3 \cdot 10^{8}$ events, $\mathcal{L}_{\mathrm{int}} = \unit[620]{nb^{-1}}$) collisions were recorded in 2013 by the ALICE detector~\cite{aliceDetector}. The details of the performance of the ALICE detector during LHC Run~1 (2009-2013) are presented in Ref.~\cite{alicePerformance}.
+The $\sqrtSnnE{5.02}$ $\pPb$ ($1.3 \cdot 10^{8}$ events, $\mathcal{L}_{\mathrm{int}} = \unit[620]{nb^{-1}}$) collisions were recorded in 2013 by the ALICE detector~\cite{aliceDetector}. The details of the performance of the ALICE detector during LHC Run~1 (2009-2013) can be found elsewhere~\cite{alicePerformance}.
 
-The analysis uses charged tracks that are reconstructed with the Inner Tracking System (ITS)~\cite{aliceITS} and the Time Projection Chamber (TPC)~\cite{aliceTPC}. These detectors are located inside the large solenoidal magnet, that provides a homogeneous magnetic field of \unit[0.5]{T}. Tracks within a pseudorapidity range $|\eta| < 0.9$ over the full azimuth can be reconstructed. The ITS is made up of the innermost Silicon Pixel Detector (SPD), the Silicon Drift Detector (SDD) and the outermost Silicon Strip Detector (SSD). Each of these consists of two layers. The TPC is a cylinder filled with gas. Gas is ionised along the path of charged particles. Liberated electrons drift towards the end plates of the cylinder where they are detected. Combining the information from the ITS and the TPC provides a resolution ranging from $1$ to $10\,\%$ for charged particles with momenta from $0.15$ to $\unit[100]{\GeVc}$. For tracks without the ITS information, the momentum resolution is comparable to that of ITS+TPC tracks below transverse momentum $\pt{} = \unit[10]{\GeVc}$, but for higher momenta the resolution reaches $20\,\%$ at $\pt{} = \unit[50]{\GeVc}$~\cite{alicePerformance,aliceBackgroundFluctuation}.
+The analysis uses charged tracks that are reconstructed with the Inner Tracking System (ITS)~\cite{aliceITS} and the Time Projection Chamber (TPC)~\cite{aliceTPC}. These detectors are located inside the large solenoidal magnet that provides a homogeneous magnetic field of \unit[0.5]{T}. Tracks within a pseudorapidity range $|\eta| < 0.9$ over the full azimuth can be reconstructed. The ITS is made up of the innermost Silicon Pixel Detector (SPD), the Silicon Drift Detector (SDD) and the outermost Silicon Strip Detector (SSD). Each of them consists of two layers. The TPC is a cylinder filled with gas. Gas is ionised along the path of charged particles. Liberated electrons are drifted towards the end plates of the cylinder where they are detected. Combining the information from the ITS and TPC provides a $\pt{}$ resolution ranging from $1$ to $10\,\%$ for charged particles from $0.15$ to $\unit[100]{\GeVc}$. For tracks without the ITS information, the momentum resolution is comparable to that of ITS+TPC tracks below transverse momentum $\pt{} = \unit[10]{\GeVc}$, but for higher momenta the resolution reaches $20\,\%$ at $\pt{} = \unit[50]{\GeVc}$~\cite{alicePerformance,aliceBackgroundFluctuation}.
 
-Neutral particles used in jet reconstruction are reconstructed by the Electromagnetic Calorimeter (EMCAL)~\cite{Cortese:2008zza}. The EMCAL covers an area with a range of $|\eta| < 0.7$  in pseudorapidity and $ 100 \deg $ in azimuth. EMCAL is complimented with the Dijet Calorimeter (DCal)~\cite{DCAL} and Photon Spectrometer (PHOS)~\cite{PHOS} that are situated opposite of the EMCAL in azimuth. PHOS covers 70 degrees in azimuth and $\left| \eta \right| < 0.12$. The DCal is technologically identical to EMCal. The DCal coverage spans over 67 degrees in azimuth, but in pseudorapidity the mid region is occupied by the PHOS. In between PHOS and DCal active volumes, there is a gap of 10 cm. DCal is fully back-to-back with EMCal.
+Neutral particles used in jet reconstruction are reconstructed by the Electromagnetic Calorimeter (EMCAL)~\cite{Cortese:2008zza}. The EMCAL covers an area with a range of $|\eta| < 0.7$  in pseudorapidity and 100 degrees in azimuth. The EMCAL is complimented with the Dijet Calorimeter (DCal)~\cite{DCAL} and Photon Spectrometer (PHOS)~\cite{PHOS} that are situated opposite of the EMCAL in azimuth. PHOS covers 70 degrees in azimuth and $\left| \eta \right| < 0.12$. The DCal is technologically identical to EMCal. The DCal coverage spans over 67 degrees in azimuth, but in pseudorapidity the mid region is occupied by the PHOS. In between PHOS and DCal active volumes, there is a gap of 10 cm. The DCal is fully back-to-back with the EMCAL.
 The combination of charged tracks with  $\pt{} > \unit[0.15]{\GeVc}$ and neutral particles with $\pt{} > \unit[0.30]{\GeVc}$ is used to construct jets.
 
-The V0 detector~\cite{forwarddetectorsTdr} provides the information for event triggering. The V0 detector consists of two scintillator hodoscopes that are located on either side of the interaction point along the beam direction. It covers the pseudorapidity region $-3.7 < \eta < -1.7$ (V0C) and $2.8 < \eta < 5.1$ (V0A). For the 2013 $\pPb$ collisions events are required to have signals in both V0A and V0C. This condition is used later offline to reduce the contamination of the data sample from beam-gas events by using the timing difference of the signal between the two stations~\cite{alicePerformance}.
+The V0 detector~\cite{forwarddetectorsTdr} provides the information for event triggering. The V0 detector consists of two scintillator hodoscopes that are located on either side of the interaction point along the beam direction. It covers the pseudorapidity region $-3.7 < \eta < -1.7$ (V0C) and $2.8 < \eta < 5.1$ (V0A). For the 2013 $\pPb$ collisions events are required to have signals in both the V0A and V0C. This condition is used later offline to reduce the contamination of data from beam-gas events using the timing difference of the signal between the two stations~\cite{alicePerformance}.
 %For the 2010 $\pp$ collisions, the minimum bias (MB) triggered events are required to have at least one hit from a charged particle traversing the SPD or either side of the V0.
 %The pseudorapidity coverage of the SPD is $|\eta| < 2$ in the first layer and $|\eta| < 1.5$ in the second layer. %Combining this with the acceptance of the V0, the particles are detected in the range $-3.7 < \eta < 5.1$. The minimum %bias trigger definition
-EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either \unit[10]{\gev}  for the low threshold trigger or \unit[20]{\gev} for the high threshold trigger in a $32\times32$ patch size.
+%EMCAL is also used to provide the jet trigger used in triggered datasets. EMCAL can be used to trigger on single shower deposits or energy deposits integrated over a larger area. Latter case is used for jet triggers. The EMCAL trigger definition in the 2013 $\pPb$ collisions requires an energy deposit of either \unit[10]{\gev}  for the low threshold trigger or \unit[20]{\gev} for the high threshold trigger in a $32\times32$ patch size.
 The Zero-Degree Calorimeters (ZDC)~\cite{PUDDU2007397} are located on both sides of ALICE at the farthest points ($|z|$~=~\unit[112.5]{cm}) from the interaction point along the beam line. They provide unbiased centrality information of pA and AA collision systems to ALICE using the energy measurement of spectator nucleons~\cite{Adam:2014qja,Abelev:2013qoq}.
 
 
@@ -58,10 +58,11 @@ In $\pPb$ collisions the tracks are selected following the hybrid approach~\cite
 \section{Analysis method}
 \label{sec:methods}
 
-The analysis is performed by analysing reconstructed jets. In each collision event, the jets are reconstructed using FastJet~\cite{fastjet} with the anti-$\kt{}$ algorithm~\cite{antikt} using size parameter $R=0.4$. Jets are selected in $\left| \eta \right| < 0.25 $ to satisfy the fiducial acceptance of the EMCal. In jet reconstruction both charged tracks with $\pt{}>\unit[0.15]{\GeVc}$ and neutral cluster with $\pt{}>\unit[0.30]{\GeVc}$ are considered. In the analysis, results are presented in terms of the jet transverse momentum $\pt{jet}$.
+The analysis is performed by analysing reconstructed jets. In each collision event, the jets are reconstructed using FastJet~\cite{fastjet} with the anti-$\kt{}$ algorithm~\cite{antikt} for resolution parameter $R=0.4$. Jets are selected in $\left| \eta \right| < 0.25 $ to satisfy the fiducial acceptance of the EMCal. In jet reconstruction both charged tracks with $\pt{}>\unit[0.15]{\GeVc}$ and neutral cluster with $\pt{}>\unit[0.30]{\GeVc}$ are considered. In the analysis, results are presented in terms of the jet transverse momentum $\pt{jet}$.
 
-The jet fragmentation transverse momentum, $\jt{}$, is defined as the component of the constituent particle momentum, $\vec{p}_{\mathrm{a}}$, transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$.
+The jet fragmentation transverse momentum $\jt{}$ is defined as the component of the constituent particle momentum transverse to the jet momentum, $\vec{p}_{\mathrm{jet}}$.
 %The resulting $\vjt{}$ is illustrated in~\fig{fig:jtdefinition}.
+%$\vec{p}_{\mathrm{a}}$
 The length of the $\vjt{}$ vector is
   \begin{equation}
     \jt{} = \frac{|\vec{p}_{\mathrm{jet}} \times \vec{p}_{\mathrm{track}}|}{|\vec{p}_{\mathrm{jet}}|} \,.
@@ -70,8 +71,7 @@ The length of the $\vjt{}$ vector is
 
 It is commonly interpreted as a transverse kick with respect to the initial hard parton momentum that is given to a fragmenting particle during the fragmentation process, which is a measure of the momentum spread of the jet fragments.
 
-The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with radius $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$\kt{}$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are only used in jet reconstruction.
-
+The reconstructed jet axis is used for $\jt{}$ reference. Any charged track within a fixed cone with a resolution parameter $R$ is taken as a jet constituent, as opposed to using the constituent list provided by the jet algorithm. Anti-$\kt{}$ produces jets that are very circular in shape. Thus this doesn't change the constituent list considerably. Neutral tracks are only used in jet reconstruction.
 The resulting $\jt{}$ distributions are corrected for the detector inefficiency using the unfolding method. The response matrix for the unfolding is obtained from a \textsc{Pythia}~\cite{introPythia81}+GEANT~\cite{Agostinelli:2002hh,Asai:2015xno} simulation.
 
 %   \begin{figure}
@@ -82,27 +82,25 @@ The resulting $\jt{}$ distributions are corrected for the detector inefficiency 
 %    \label{fig:jtdefinition}
 %  \end{figure}
 
-The underlying event is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ Rotation in $\phi$). $\jt{}$ is calculated for any tracks found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $\jt{}$. The background obtained in this manner is subtracted from the unfolded inclusive $\jt{}$ distribution, which gives the resulting signal distribution. To make sure there is no jet contribution in the background, any events with jets inside the perpendicular cone are not used for background estimation.
+The underlying event is estimated by looking at an imaginary jet cone perpendicular to the observed jet axis ($\frac{\pi}{2}$ rotation in $\phi$). The $\jt{}$ is calculated for any tracks that are found within this cone. The vector sum of the individual track momentum and the imaginary jet axis is used as reference for $\jt{}$. The background obtained in this manner is subtracted from the unfolded inclusive $\jt{}$ distribution, which gives the resulting signal distribution. To make sure there is no jet contribution in the background, any events with jets inside the perpendicular cone are not used for background estimation.
 
 
 
-The resulting signal distribution are fitted with a 2 component function shown in Eq.~\ref{eq:fit}. Gaussian distribution is used for low $\jt{}$ and an inverse gamma function is used for high $\jt{}$. The gaussian is taken to have the center at $\jt{} = 0$. In total this gives 5 parameters. ~\cite{ALICEjt}
-
+The resulting signal distribution is fitted with a two-component function shown in Eq.~\ref{eq:fit}. 
+A Gaussian distribution centered at \jt~=~0 is used for lower $\jt{}$ and an inverse gamma function is used for $\jt{}$ above $\unit[1]{\GeVc}$ . In total this gives 5 parameters~\cite{ALICEjt}. 
 \begin{equation}
 \frac{1}{N_{\mathrm{jets}}}\frac{\mathrm{d}N}{\jt{} \mathrm{d}\jt{}} = \frac{B_2}{B_1\sqrt{2\pi}}e^{-\frac{\jt{}^2}{2B_1^2}}+\frac{B_3B_5^{B_4}}{\Gamma\left(B_4\right)}\frac{e^{-\frac{B_5}{\jt{}}}}{\jt{}^{B_4+1}}
 \label{eq:fit}
 \end{equation}
+To achieve stable results the fitting is performed in two steps. First each component is fitted with a Gaussian and inverse gamma function, separately. After getting the results from the individual fits,  they are combined into a single function with initial values from the individual results and then an additional fit is performed. 
+%The result from fitting only the gaussian component to the entire distribution is approximately the same as the gaussian component in the two-component model.
+After getting the fit function, $\sqrt{\left<\jt{}^2\right>}$ (RMS) and yield values are  extracted separately from each component. The narrow component RMS is
 
-To achieve stable results the fitting is performed in two steps. First each component is fitted separately. Gaussian component is fitted to the low end in $\jt{}$. Inverse gamma component is fitted to $\jt{}$ above $\unit[1]{\GeVc}$. After getting the results from the individual fits they are combined into a single function with initial values from the individual results and an additional fit is performed. The result from fitting only
-the gaussian component to the entire distribution is approximately the same as the gaussian component in the two-component model.
-
-After getting the fit function $\sqrt{\left<\jt{}^2\right>}$ (RMS) and yield values are  extracted separately from each component. The narrow component RMS is
-
-$$\sqrt{\left<\jt{}^2\right>}=\sqrt{2}B_1,$$
+$$\sqrt{\left<\jt{}^2\right>}=\sqrt{2}B_1\quad,$$
 
 and the wide component RMS value is calculated as
 
-$$\sqrt{\left<\jt{}^2\right>}=\frac{B_5}{\sqrt{\left(B_4-2\right)\left(B_4-3\right)}},$$
+$$\sqrt{\left<\jt{}^2\right>}=\frac{B_5}{\sqrt{\left(B_4-2\right)\left(B_4-3\right)}}\quad,$$
 
 where it is required that $B_4 > 3$.
 
@@ -114,8 +112,7 @@ The systematics in background estimation were studied using an alternative metho
 
 The systematic uncertainty that arises from the unfolding procedure is estimated by performing the unfolding with two separate methods. Data corrected by the iterative unfolding method are used as the results and the SVD unfolding method is employed to estimate the uncertainty. In a \textsc{Pythia} closure test the true distribution was in general found to be between the unfolded distributions from the iterative and SVD methods. The difference between the methods when unfolding data should give a reasonable estimate of the unfolding uncertainty. The resulting uncertainty is below 8\% for both wide and narrow component RMS.
 
-The different source of the systematic uncertainty are considered as uncorrelated and the values of each source are summed in quadrature. The resulting uncertainty is 10 \% for the wide component RMS and 13 \% for the narrow component RMS.
-
+The different source of the systematic uncertainty are considered as uncorrelated and the values of each source are summed in quadrature. The resulting uncertainty is 10 \% for the wide component RMS and 13 \% for the narrow component RMS. There is no tracking and no unfolding uncertainty in the Monte Carlo simulations.
 
 \begin{table}[htb]
 \centering
@@ -133,20 +130,15 @@ The different source of the systematic uncertainty are considered as uncorrelate
   \end{tabular}
   \end{table}
 
-There is no tracking and no unfolding uncertainty in the Monte Carlo simulations.
 
 \section{Results}
 \label{sec:results}
 
-Distributions of $\jt{}$ after unfolding and background subtraction are shown in Fig. \ref{fig:jt_systematics}.
-The yield at low $\jt{}$ stays constant with increasing $\pt{jet}$. At high $\jt{}$ the yield increases and the distributions become wider. In part this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum.
-
-$$\jt{max} \approx R \cdot \pt{track}$$
-
-With increasing jet $\pt{}$ the possible track momenta also increase. 
+The distributions of $\jt{}$ after unfolding and background subtraction are shown in Fig. \ref{fig:jt_systematics}.
+The yield at low $\jt{}$ stays constant with increasing $\pt{jet}$. At high $\jt{}$ the yield increases and the distributions become wider. Notably, this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum by the relation of $\jt{max} \approx R \cdot \pt{track}$ and this results an increase of the possible track momenta as jet $\pt{}$ increases. 
 
 
-The distributions are fitted using a two component fit. An example of the fitted distribution is shown in Fig. \ref{fig:fits}. The $\jt{}$ distributions are well described by the two component model fit.
+The distributions are fitted using a two-component fit. An example of the fitted distribution is shown in Fig. \ref{fig:fits}. The $\jt{}$ distributions are well described by the two component model fit.
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -161,7 +153,7 @@ The distributions are fitted using a two component fit. An example of the fitted
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/results/jTwithSystematics.pdf}
-\caption{Final $\jt{}$ signal distributions with systematic uncertainties shown for different $\pt{jet}$ bins. The distributions get wider with increasing $\pt{jet}$.}
+\caption{The distributions of \jt\ for different $\pt{jet}$ bins. The distributions get wider with increasing $\pt{jet}$.}
 %Fig1_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
 \label{fig:jt_systematics}
 \end{center}
@@ -178,17 +170,15 @@ The distributions are fitted using a two component fit. An example of the fitted
 
 The per jet  widths of the $\jt{}$ distributions are determined as a function of the transverse momentum of jet. The results are obtained from the area and RMS of the fits to the narrow and wide components of the $\jt{}$ distribution. The RMS $\left(\rms{\jt{}}\,\right)$ values for the two components are shown in \fig{fig:rms_models} with comparison to Monte Carlo simulations.
 
-There is clear separation in the width of the wide and narrow components of the $\jt{}$ distributions. The RMS of the wide component is 3-4 times larger than the narrow component RMS. The wide component is assumed to correspond to the fragmentation part of jet formation while the narrow component is linked with the hadronisation phase.
+There is clear separation in the width of the wide and narrow components of the $\jt{}$ distributions. The RMS of the wide component is 3-4 times larger than the narrow component RMS. The wide component is assumed to correspond to the fragmentation part of jet formation while the narrow component is linked to the hadronisation phase. The wide component RMS shows an increasing trend with increasing $\pt{jet}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
-The wide component RMS shows an increasing trend with increasing $\pt{jet}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
-
-\textsc{Pythia} describes well the RMS values in both the narrow and wide components. Herwig, on the other hand, gives $\jt{}$ distributions that are wider than the data. \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. However the narrow component, which is associated with the hadronisation, seems to be similar in both \textsc{Pythia} and Herwig and the difference is in the wide component, that is associated with the showering process.
+\textsc{Pythia} describes the RMS values well in both the narrow and wide components. Herwig, on the other hand, gives $\jt{}$ distributions that are wider than the data. \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. However, the narrow component which is associated with the hadronisation seems to be similar in both \textsc{Pythia} and Herwig and the difference is in the wide component, that is associated with the showering process.
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt5.pdf}
 \includegraphics[width=0.45\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
-\caption{$\jt{}$ distribution with two component fitting}
+\caption{$\jt{}$ distribution with two component fitting for $60<p_\mathrm{Tjet}<80$ (left) and \unit[]$100<p_\mathrm{Tjet}<150$]{\GeVc} (right). }
 %Fig2_DrawFinalFits.py in https://github.com/TWSman/JtAnalysis
 \label{fig:fits}
 \end{center}
@@ -201,13 +191,13 @@ The wide component RMS shows an increasing trend with increasing $\pt{jet}$, whi
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/results/RMSWithSystematics_Pythia.pdf}
-\caption{RMS and yield values extracted from the fits for the gaussian (narrow) and inverse gamma (wide) components}
+\caption{RMS and yield values extracted from the fits for the Gaussian (narrow) and inverse gamma (wide) components}
 \label{fig:rms_models}
 %Fig3and5_DrawRMS.py https://github.com/TWSman/JtAnalysis
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between minimum bias and high multiplicity events. Two separate centrality estimators, V0 and ZDC, are used to provide the multiplicity percentiles. Out of these two ZDC is expected to be least sensitive to jet biases in event multiplicity.
+Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between minimum bias and high multiplicity events. Two separate centrality estimators, V0 and ZDC, are used to provide the multiplicity percentiles. Out of these two estimators, ZDC is expected to be less sensitive to jet biases in event multiplicity.
 
 \begin{figure}[htb]
 \begin{center}
@@ -235,8 +225,8 @@ Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between m
 \end{figure}
 
 Comparison to $\jt{}$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. %Similarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
-
-The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pt{trigger}$/$\pt{jet}$. Narrow component RMS increases slightly in dihadron analysis but not in jet $\jt{}$, WHY? (Depends on $x_{||}$ bin in dihadron)
+The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pt{trigger}$/$\pt{jet}$. Narrow component RMS values increase slightly in dihadron analysis but not in jet $\jt{}$. 
+%WHY? (Depends on $x_{||}$ bin in dihadron)
 
 In general dihadron $\jt{}$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in Fig. \ref{fig:Rcomparison}. This should be the dominant factor.
 
@@ -252,30 +242,28 @@ In general dihadron $\jt{}$ gives wider distributions with larger RMS values. In
  \put(0,90){\color{black}(b)}
 \end{overpic}
 }
-\caption[\textsc{Pythia} $R$ parameters $\jt{}$]{Effect of changing $R$ parameter in jet finding on $\jt{}$ distributions. (a) Comparison of $\jt{}$ signal distributions between different $R$ parameters. (b) Comparison of resulting RMS values.}
+\caption[\textsc{Pythia} $R$ parameters $\jt{}$]{The effect of changing $R$ parameter in jet finding on $\jt{}$ distributions. Comparison of $\jt{}$ signal distributions between different $R$ parameters (a) and one of resulting RMS values (b).}
 %Fig6_PythiaComparison.py in https://github.com/TWSman/JtAnalysis
 \label{fig:Rcomparison}
 \end{figure}
 
 
-Effect of the $R$ parameter choice is studied in \textsc{Pythia}. Having a fixed cone puts hard limits on the possible $\jt{}$ values. Increasing the cone size loosens these limits and allows higher $\jt{}$ values. The results are shown in Fig. \ref{fig:Rcomparison}. Left hand side shows the $\jt{}$ distributions. There is very little change in low $\jt{}$ but at high $\jt{}$ the yield increases.
+The effect of the $R$ parameter choice is studied with \textsc{Pythia}. Having a fixed cone puts hard limits on the possible $\jt{}$ values. Increasing the cone size loosens these limits and allows higher $\jt{}$ values. The results are shown in Fig.~\ref{fig:Rcomparison}. The $\jt{}$ distributions show little change at low $\jt{}$ but at high $\jt{}$ the change increases as shown in Fig.~\ref{fig:Rcomparison}a.  
 
-This is also seen in the RMS values shown in the right hand side of Fig. \ref{fig:Rcomparison}, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $\pt{}$ larger $R$ parameter leads to larger RMS values, but at hight $\pt{jet}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
+This is also seen in the RMS values shown in Fig.~\ref{fig:Rcomparison}b, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $\pt{}$ larger $R$ parameter leads to larger RMS values, but at hight $\pt{jet}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
 
-Additionally the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values are different. In practice the jet axis found by the jet finding algorithm tends to minimise the $\jt{}$ of jet constituents. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller.
+Additionally, the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values are different. In practice the jet axis found by the jet finding algorithm tends to minimise the $\jt{}$ of jet constituents. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller.
 
 A naive \textsc{Pythia} study was performed where $\jt{}$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/results/MixedFullJetsR04JetConeJtLeadingRefPtFrom2To6}
-\caption{Results of calculating $\jt{}$ with respect to the jet axis or the leading hadron. The assumption is that because the leading hadron is an imperfect estimate of the jet axis, low $\jt{}$ tracks should on average be shifted to higher $\jt{}$}
+\caption{Results of calculating $\jt{}$ with respect to the jet axis or the leading hadron. The assumption is that low $\jt{}$ tracks should on average be shifted to higher $\jt{}$ because the leading hadron is an imperfect estimate of the jet axis,}
 \label{fig:RefComparison}
 %Fig7_DrawSignalJtRef.py in https://github.com/TWSman/JtAnalysis
-\label{fig:Rcomparison}
-
 \end{figure}
 
 \section{Summary}
 \label{sec:summary}
-In this work two distinct $\jt{}$ components were extracted for narrow and wide contributions using jet reconstruction. RMS values for both components were obtained. The width of the wide component is found to increase for increasing $\pt{jet}$. This is in part explained by the changing kinematical limits when going to higher $\pt{jet}$ which allows higher $\pt{track}$. Additionally the larger phase space allows stronger parton splitting. The results are qualitatively compatible with previous studies that studied $\jt{}$ using two-particle correlations.
+In this work two distinct $\jt{}$ components were extracted for narrow and wide contributions using jet reconstruction. RMS values for both components were obtained. The width of the wide component is found to increase for increasing $\pt{jet}$. This is because of changing kinematical limits when going to higher $\pt{jet}$ which allows higher $\pt{track}$. Additionally, the larger phase space allows stronger parton splitting. The results are qualitatively compatible with the previous $\jt{}$ studies using two-particle correlations.
