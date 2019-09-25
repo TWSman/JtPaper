@@ -131,14 +131,15 @@ The different source of the systematic uncertainty are considered as uncorrelate
   \end{table}
 
 
+
 \section{Results}
 \label{sec:results}
 
 The distributions of $\jt{}$ after unfolding and background subtraction are shown in Fig. \ref{fig:jt_systematics}.
-The yield at low $\jt{}$ stays constant with increasing $\pt{jet}$. At high $\jt{}$ the yield increases and the distributions become wider. Notably, this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ and this results an increase of the possible track momenta as jet $\pt{}$ increases. 
+The yield at low $\jt{}$ stays constant with increasing \ptjet. At high $\jt{}$ the yield increases and the distributions become wider. Notably, this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ and this results an increase of the possible track momenta as \ptjet\ increases. 
 
 
-The distributions are fitted using a two-component fit. An example of the fitted distribution is shown in Fig. \ref{fig:fits}. The $\jt{}$ distributions are well described by the two-component model fit.
+The distributions are fitted using a two-component fit. An example of the fitted distribution is shown in Fig.~\ref{fig:fits} for \unit[$60<\ptjet<80$]{\GeVc}. The $\jt{}$ distrubtution of ALICE is fitted with the two-component function that is a combination of a Gaussian and an inverse gamma. The Gaussian is responsible for the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is for the wide one originating from the showering process. The $\jt{}$ distributions are well described by the two-component model fit.
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -150,9 +151,9 @@ The distributions are fitted using a two-component fit. An example of the fitted
 %\end{center}
 %\end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{newfigures/jTwithSystematics.pdf}
+\includegraphics[width=0.7\textwidth]{newfigures/jTwithSystematics.pdf}
 \caption{The distributions of \jt\ for different $\pt{jet}$ ranges get wider with increasing $\pt{jet}$ that originates from the kinematic limit by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ with respect to the fixed resolution paramemeter R.}
 %Fig1_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
 \label{fig:jt_systematics}
@@ -174,11 +175,11 @@ There is clear separation in the width of the wide and narrow components of the 
 
 \textsc{Pythia} describes the RMS values well in both the narrow and wide components. Herwig, on the other hand, gives $\jt{}$ distributions that are wider than the data. \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. However, the narrow component which is associated with the hadronisation seems to be similar in both \textsc{Pythia} and Herwig and the difference is in the wide component, that is associated with the showering process.
 
-\begin{figure}[htb]
+\begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.48\textwidth]{figures/results/JtSignalFinalFitJetPt5.pdf}
-\includegraphics[width=0.48\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
-\caption{$\jt{}$ distribution with two component fitting for $60<p_\mathrm{Tjet}<80$ (left) and \unit[$100<p_\mathrm{Tjet}<150$]{\GeVc} (right). }
+\includegraphics[width=0.7\textwidth]{newfigures/JtSignalFinalFitJetPt5.pdf}
+%\includegraphics[width=0.48\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
+\caption{The $\jt{}$ distribution with a two-component fit for \unit[$60<\ptjet<80$]{\GeVc}. The signal distrubtution of ALICE is fitted with a two-component function that is composed of a Gaussian and an inverse gamma fuction. The Gaussian is responsible for the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is for the wide one originating from the showering process.}
 %Fig2_DrawFinalFits.py in https://github.com/TWSman/JtAnalysis
 \label{fig:fits}
 \end{center}
@@ -187,10 +188,9 @@ There is clear separation in the width of the wide and narrow components of the 
 
 
 
-
-\begin{figure}[htb]
+\begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figures/results/RMSWithSystematics_Pythia.pdf}
+\includegraphics[width=0.7\textwidth]{newfigures/RMSWithSystematics_Pythia.pdf}
 \caption{RMS and yield values extracted from the fits for the Gaussian (narrow) and inverse gamma (wide) components}
 \label{fig:rms_models}
 %Fig3and5_DrawRMS.py https://github.com/TWSman/JtAnalysis
@@ -199,6 +199,7 @@ There is clear separation in the width of the wide and narrow components of the 
 
 Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between minimum bias and high multiplicity events. Two separate centrality estimators, V0 and ZDC, are used to provide the multiplicity percentiles. Out of these two estimators, ZDC is expected to be less sensitive to jet biases in event multiplicity.
 
+\iffalse
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/results/HighMJetConeJtSignalPtFrom4To8.pdf}
@@ -207,7 +208,7 @@ Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between m
 \label{fig:jt_highmult}
 \end{center}
 \end{figure}
-
+\fi
 
 
 \FloatBarrier
@@ -220,15 +221,15 @@ Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between m
 
 %\subfigure{ \includegraphics[width = 0.42\textwidth]{figures/results/RMSWithSystematics_DihadronTriggerPt}}
 %\subfigure{ \includegraphics[width = 0.42\textwidth]{figures/results/RMSWithSystematics_DihadronJetPt}}
-\caption{Comparison of results with dihadron $\jt{}$ results. Dihadron trigger $\pt{}$ bins are converted to jet $\pt{}$  bins  using observed mean  $\pt{jet}$ values in $\pt{trigger}$ bins. Dihadron results are for $0.2 < x_{||} < 0.4$, where $x_{||}$ is the ratio between the perpendicular component of the associated track and the trigger. }
+\caption{Comparison of results with dihadron $\jt{}$ results. Dihadron trigger $\pt{}$ ranges are converted to corresponding \ptjet\ ranges  using observed mean \ptjet\ values in \pttrigger\ bins. Dihadron results are for $0.2 < x_{||} < 0.4$, where $x_{||}$ is the ratio between the perpendicular component of the associated track and the trigger. }
 \label{fig:DihadronComparison}
 \end{figure}
 
 Comparison to $\jt{}$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. %Similarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
-The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pt{trigger}$/$\pt{jet}$. Narrow component RMS values increase slightly in dihadron analysis but not in jet $\jt{}$. 
+The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pttrigger/\ptjet$. Narrow component RMS values increase slightly in dihadron analysis but that is not true for $\jt{}$ measured with jets. 
 %WHY? (Depends on $x_{||}$ bin in dihadron)
 
-In general dihadron $\jt{}$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in Fig. \ref{fig:Rcomparison}. This should be the dominant factor.
+In general, dihadron $\jt{}$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in Fig. \ref{fig:Rcomparison}. This should be the dominant factor.
 
 \begin{figure}[htp]
 \centering
