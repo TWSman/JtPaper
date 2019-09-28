@@ -36,7 +36,7 @@ We also present a comparison to \textsc{Pythia} and Herwig simulations.
 
 \section{Experimental setup and data samples}
 \label{sec:experimentaldetails}
-The $\sqrtSnnE{5.02}$ $\pPb$ ($1.3 \cdot 10^{8}$ events, $\mathcal{L}_{\mathrm{int}} = \unit[620]{nb^{-1}}$) collisions were recorded in 2013 by the ALICE detector~\cite{aliceDetector}. The details of the performance of the ALICE detector during LHC Run~1 (2009-2013) can be found elsewhere~\cite{alicePerformance}.
+The $\sqrtSnnE{5.02}$ $\pPb$ ($1.3 \cdot 10^{8}$ events, $\mathcal{L}_{\mathrm{int}} = \unit[620]{nb^{-1}}$) collisions were recorded in 2013 by the ALICE detector~\cite{aliceDetector}. The details of the performance of the ALICE detector during LHC Run~1 (2009--2013) can be found elsewhere~\cite{alicePerformance}.
 
 The analysis uses charged tracks that are reconstructed with the Inner Tracking System (ITS)~\cite{aliceITS} and the Time Projection Chamber (TPC)~\cite{aliceTPC}. These detectors are located inside the large solenoidal magnet that provides a homogeneous magnetic field of \unit[0.5]{T}. Tracks within a pseudorapidity range $|\eta| < 0.9$ over the full azimuth can be reconstructed. The ITS is made up of the innermost Silicon Pixel Detector (SPD), the Silicon Drift Detector (SDD) and the outermost Silicon Strip Detector (SSD). Each of them consists of two layers. The TPC is a cylinder filled with gas. Gas is ionised along the path of charged particles. Liberated electrons are drifted towards the end plates of the cylinder where they are detected. Combining the information from the ITS and TPC provides a $\pt{}$ resolution ranging from $1$ to $10\,\%$ for charged particles from $0.15$ to $\unit[100]{\GeVc}$. For tracks without the ITS information, the momentum resolution is comparable to that of ITS+TPC tracks below transverse momentum $\pt{} = \unit[10]{\GeVc}$, but for higher momenta the resolution reaches $20\,\%$ at $\pt{} = \unit[50]{\GeVc}$~\cite{alicePerformance,aliceBackgroundFluctuation}.
 
@@ -132,14 +132,39 @@ The different source of the systematic uncertainty are considered as uncorrelate
 
 
 
+\newpage
 \section{Results}
 \label{sec:results}
 
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{newfigures/jTwithSystematics.pdf}
+  \caption{The distributions of \jt\ for different $\pt{jet}$ ranges get wider with increasing $\pt{jet}$ that originates from the kinematic limit by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ with respect to the fixed resolution paramemeter R.}
+  %Fig1_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
+  \label{fig:jt_systematics}
+  \end{center}
+  \end{figure}
+
 The distributions of $\jt{}$ after unfolding and background subtraction are shown in Fig. \ref{fig:jt_systematics}.
-The yield at low $\jt{}$ stays constant with increasing \ptjet. At high $\jt{}$ the yield increases and the distributions become wider. Notably, this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ and this results an increase of the possible track momenta as \ptjet\ increases. 
+The yield at low $\jt{}$ stays constant with increasing \ptjet. At high $\jt{}$ the yield increases and the distributions become wider. Notably, this is due to kinematical limits. Within a fixed cone the maximum $\jt{}$ depends on the track momentum by the relation of $\jt{max} \approx R \cdot \pt{track}$ and this results an increase of the possible track momenta as \ptjet\ increases.
 
+The effect of the $R$ parameter choice and \ptjet\ dependence on $\jt{max}$ was explored using \textsc{Pythia}~8 in Appendix~\ref{A:Rdependence}. Having a fixed cone puts hard limits on the possible $\jt{}$ values. Increasing the cone size loosens these limits and allows higher $\jt{}$ values like higher \ptjet\ values affect on it. The results are shown in Fig.~\ref{fig:Rcomparison}. The $\jt{}$ distributions show little change at low $\jt{}$ but at high $\jt{}$ the change increases as shown in Fig.~\ref{fig:Rcomparison}a.  
+  
+This is also seen in the RMS values as shown in Fig.~\ref{fig:Rcomparison}b, where the change in wide component RMS is about 10\% when going from $R=0.3$ to 0.4 and 0.5. With the narrow component values the situation is less clear. At low jet $\pt{}$ larger $R$ parameter leads to larger RMS values, but at hight $\pt{jet}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
 
-The distributions are fitted using a two-component fit. An example of the fitted distribution is shown in Fig.~\ref{fig:fits} for \unit[$60<\ptjet<80$]{\GeVc}. The $\jt{}$ distrubtution of ALICE is fitted with the two-component function that is a combination of a Gaussian and an inverse gamma. The Gaussian is responsible for the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is for the wide one originating from the showering process. The $\jt{}$ distributions are well described by the two-component model fit.
+%As shown in Fig.~\ref{fig:Rcomparison}, the resolution parameter and \ptjet\ show a clear effect on the wide RMS resulting from an incerease of $\jt{max}$ as those variables increase.
+
+\begin{figure}[t]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{newfigures/JtSignalFinalFitJetPt5.pdf}
+  %\includegraphics[width=0.48\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
+  \caption{The $\jt{}$ distribution with a two-component fit for \unit[$60<\ptjet<80$]{\GeVc}. The signal distrubtution of ALICE is fitted with a two-component function that is composed of a Gaussian and an inverse gamma fuction. The Gaussian is responsible for the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is for the wide one originating from the showering process.}
+  %Fig2_DrawFinalFits.py in https://github.com/TWSman/JtAnalysis
+  \label{fig:fits}
+  \end{center}
+  \end{figure}
+  
+The distributions are fitted using a two-component fit. An example of the fitted distribution is shown in Fig.~\ref{fig:fits} for \unit[$60<\ptjet<80$]{\GeVc}. The $\jt{}$ distrubtution of ALICE is fitted with the two-component function that is a combination of a Gaussian and an inverse gamma. The Gaussian corresponds to the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is to the wide one originating from the showering process. The $\jt{}$ distributions are well described by the two-component model fit.
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -151,14 +176,6 @@ The distributions are fitted using a two-component fit. An example of the fitted
 %\end{center}
 %\end{figure}
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.7\textwidth]{newfigures/jTwithSystematics.pdf}
-\caption{The distributions of \jt\ for different $\pt{jet}$ ranges get wider with increasing $\pt{jet}$ that originates from the kinematic limit by the relation of $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ with respect to the fixed resolution paramemeter R.}
-%Fig1_DrawJtSystematics.py in https://github.com/TWSman/JtAnalysis
-\label{fig:jt_systematics}
-\end{center}
-\end{figure}
 
 %\begin{figure}[htb]
 %\begin{center}
@@ -169,33 +186,26 @@ The distributions are fitted using a two-component fit. An example of the fitted
 %\end{center}
 %\end{figure}
 
+\newpage
+
+\begin{figure}[t]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{newfigures/RMSWithSystematics_Pythia.pdf}
+  \caption{RMS and yield values extracted from the fits for the Gaussian (narrow) and inverse gamma (wide) components}
+  \label{fig:rms_models}
+  %Fig3and5_DrawRMS.py https://github.com/TWSman/JtAnalysis
+  \end{center}
+  \end{figure}
+
 The per jet  widths of the $\jt{}$ distributions are determined as a function of the transverse momentum of jet. The results are obtained from the area and RMS of the fits to the narrow and wide components of the $\jt{}$ distribution. The RMS $\left(\rms{\jt{}}\,\right)$ values for the two components are shown in \fig{fig:rms_models} with comparison to Monte Carlo simulations.
 
 There is clear separation in the width of the wide and narrow components of the $\jt{}$ distributions. The RMS of the wide component is 3-4 times larger than the narrow component RMS. The wide component is assumed to correspond to the fragmentation part of jet formation while the narrow component is linked to the hadronisation phase. The wide component RMS shows an increasing trend with increasing $\pt{jet}$, while the narrow component RMS stays roughly constant. Both of these trends are qualitatively consistent with the results seen in dihadron $\jt{}$ analysis~\cite{ALICEjt}
 
 \textsc{Pythia} describes the RMS values well in both the narrow and wide components. Herwig, on the other hand, gives $\jt{}$ distributions that are wider than the data. \textsc{Pythia} uses the Lund string model for hadronisation while Herwig uses a cluster model. However, the narrow component which is associated with the hadronisation seems to be similar in both \textsc{Pythia} and Herwig and the difference is in the wide component, that is associated with the showering process.
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.7\textwidth]{newfigures/JtSignalFinalFitJetPt5.pdf}
-%\includegraphics[width=0.48\textwidth]{figures/results/JtSignalFinalFitJetPt7.pdf}
-\caption{The $\jt{}$ distribution with a two-component fit for \unit[$60<\ptjet<80$]{\GeVc}. The signal distrubtution of ALICE is fitted with a two-component function that is composed of a Gaussian and an inverse gamma fuction. The Gaussian is responsible for the narrow part coming from the hadronisation process, on the other hand, the inverse gamma is for the wide one originating from the showering process.}
-%Fig2_DrawFinalFits.py in https://github.com/TWSman/JtAnalysis
-\label{fig:fits}
-\end{center}
-\end{figure}
 
 
 
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.7\textwidth]{newfigures/RMSWithSystematics_Pythia.pdf}
-\caption{RMS and yield values extracted from the fits for the Gaussian (narrow) and inverse gamma (wide) components}
-\label{fig:rms_models}
-%Fig3and5_DrawRMS.py https://github.com/TWSman/JtAnalysis
-\end{center}
-\end{figure}
 
 \iffalse
 Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between minimum bias and high multiplicity events. Two separate centrality estimators, V0 and ZDC, are used to provide the multiplicity percentiles. Out of these two estimators, ZDC is expected to be less sensitive to jet biases in event multiplicity.
@@ -213,9 +223,9 @@ Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between m
 \fi
 
 
-\FloatBarrier
+%\FloatBarrier
 
-\subsection{Discussions}
+%\subsection{Discussions}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.7\textwidth]{newfigures/RMSWithSystematics_DihadronJetPt}
@@ -227,46 +237,51 @@ Figure~\ref{fig:jt_highmult} shows comparison of $\jt{}$ distributions between m
 \label{fig:DihadronComparison}
 \end{figure}
 
-Comparison to $\jt{}$ results from dihadron analysis ~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. %Similarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
+Comparison to $\jt{}$ results from dihadron analysis~\cite{ALICEjt} is shown in Fig. \ref{fig:DihadronComparison}. Trigger $\pt{}$ bins used in dihadron analysis are converted to jet $\pt{}$ bins using observed average jet $\pt{}$ values in leading track momentum bins. %Similarly jet $\pt{}$ bins are converted to $\pt{trigger}$ bins using average leading track $\pt{}$ values in $\pt{jet}$ bins.
 The trends are similar in dihadron and jet $\jt{}$ results. Wide component RMS values tend to increase with increasing $\pttrigger/\ptjet$. Narrow component RMS values increase slightly in dihadron analysis but that is not true for $\jt{}$ measured with jets. 
 %WHY? (Depends on $x_{||}$ bin in dihadron)
 
-In general, dihadron $\jt{}$ gives wider distributions with larger RMS values. In jet analysis the cone size limits width and thus the RMS values. With increasing cone size one gets increasing wide RMS values as seen in Fig. \ref{fig:Rcomparison}. This should be the dominant factor.
-
 \begin{figure}[htp]
-\centering
-\subfigure{
- \begin{overpic}[width = 0.4\textwidth]{figures/results/RcomparisonSignalPt6080.pdf}
- \put(0,90){\color{black}(a)}
- \end{overpic}
- }
-\subfigure{ 
-\begin{overpic}[width = 0.4\textwidth]{figures/results/RcomparisonRMS.pdf}
- \put(0,90){\color{black}(b)}
-\end{overpic}
-}
-\caption[\textsc{Pythia} $R$ parameters $\jt{}$]{The effect of changing $R$ parameter in jet finding on $\jt{}$ distributions. Comparison of $\jt{}$ signal distributions between different $R$ parameters (a) and one of resulting RMS values (b).}
-%Fig6_PythiaComparison.py in https://github.com/TWSman/JtAnalysis
-\label{fig:Rcomparison}
+  \centering
+  \includegraphics[width=0.75\textwidth]{newfigures/MixedFullJetsR04JetConeJtLeadingRefPtFrom2To6}
+  \caption{Results of calculating $\jt{}$ with respect to the jet axis or the leading hadron. The assumption is that low $\jt{}$ tracks should on average be shifted to higher $\jt{}$. This represents the leading hadron is an imperfect estimate of the jet axis.}
+  \label{fig:RefComparison}
+  %Fig7_DrawSignalJtRef.py in https://github.com/TWSman/JtAnalysis
 \end{figure}
+  
+Notably, the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values based on the leading track are basically biased from the axis of the jet to one of the leading track. In practice the jet axis found by the jet finding algorithm tends to minimise the $\jt{}$ of jet constituents since there is no fluctuation for the choice of the axis compared to the dihadron analysis. Also, the resolution parameter $R$ of the jet finding algorithm regulates the maximum value of $\jt{}$ by the relation $\jt{max} \approx \mathrm{R} \cdot \pt{track}$ as discussed already. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller for the jet $\jt{}$ analysis than those of the dihadron analysis. 
+
+A \textsc{Pythia} study was performed where $\jt{}$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
 
 
-The effect of the $R$ parameter choice is studied with \textsc{Pythia}. Having a fixed cone puts hard limits on the possible $\jt{}$ values. Increasing the cone size loosens these limits and allows higher $\jt{}$ values. The results are shown in Fig.~\ref{fig:Rcomparison}. The $\jt{}$ distributions show little change at low $\jt{}$ but at high $\jt{}$ the change increases as shown in Fig.~\ref{fig:Rcomparison}a.  
 
-This is also seen in the RMS values shown in Fig.~\ref{fig:Rcomparison}b, where the change in wide component RMS is about 10\% when going from $R=0.4$ to $R=0.3$ or $R=0.5$. With the narrow component values the situation is less clear. At low jet $\pt{}$ larger $R$ parameter leads to larger RMS values, but at hight $\pt{jet}$ the situation is reversed; increasing the $R$ parameter decreases RMS values.
 
-Additionally, the leading track is an imperfect estimate of the jet/original parton. Because the leading track in general is at an angle compared to the jet axis, the resulting $\jt{}$ values are different. In practice the jet axis found by the jet finding algorithm tends to minimise the $\jt{}$ of jet constituents. Thus the yield at high $\jt{}$ is limited and the RMS values are smaller.
 
-A naive \textsc{Pythia} study was performed where $\jt{}$ was calculated with respect to the leading track momentum, instead of the jet axis. The results are shown in Fig. \ref{fig:RefComparison}. The resulting $\jt{}$ distributions are significantly wider than $\jt{}$ distributions from the typical method. The effect seems to be larger than the effect seen in comparing different $R$ values.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.75\textwidth]{figures/results/MixedFullJetsR04JetConeJtLeadingRefPtFrom2To6}
-\caption{Results of calculating $\jt{}$ with respect to the jet axis or the leading hadron. The assumption is that low $\jt{}$ tracks should on average be shifted to higher $\jt{}$ because the leading hadron is an imperfect estimate of the jet axis,}
-\label{fig:RefComparison}
-%Fig7_DrawSignalJtRef.py in https://github.com/TWSman/JtAnalysis
-\end{figure}
 
 \section{Summary}
 \label{sec:summary}
 In this work two distinct $\jt{}$ components were extracted for narrow and wide contributions using jet reconstruction. RMS values for both components were obtained. The width of the wide component is found to increase for increasing $\pt{jet}$. This is because of changing kinematical limits when going to higher $\pt{jet}$ which allows higher $\pt{track}$. Additionally, the larger phase space allows stronger parton splitting. The results are qualitatively compatible with the previous $\jt{}$ studies using two-particle correlations.
+
+\newpage
+\appendix
+\section{MC stury for R-dependence}
+\label{A:Rdependence}
+\begin{figure}[h]
+  \centering
+  %\subfigure{
+  % \begin{overpic}[width = 0.4\textwidth]{figures/results/RcomparisonSignalPt6080.pdf}
+  % \put(0,90){\color{black}(a)}
+  % \end{overpic}
+  % }
+  %\subfigure{ 
+  %\begin{overpic}[width = 0.4\textwidth]{figures/results/RcomparisonRMS.pdf}
+  % \put(0,90){\color{black}(b)}
+  %\end{overpic}
+  %}
+  \includegraphics[width=0.7\textwidth]{newfigures/RcomparisonRMS.pdf}
+  \caption[\textsc{Pythia} $R$ parameters $\jt{}$]{The effect of changing $R$ parameter in jet finding on $\jt{}$ distributions. Comparison of $\jt{}$ signal distributions between different $R$ parameters (a) and one of resulting RMS values (b).}
+  %Fig6_PythiaComparison.py in https://github.com/TWSman/JtAnalysis
+  \label{fig:Rcomparison}
+  \end{figure}
+  
+  
