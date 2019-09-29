@@ -59,7 +59,7 @@
 \renewcommand{\rmdefault}{ptm}
 \usepackage{mathptmx}
 
-\RequirePackage{graphicx,amsmath,amssymb,array,tabularx,url,xspace,subfigure}
+\RequirePackage{graphicx,amsmath,amssymb,array,tabularx,url,xspace}
 \RequirePackage{ifthen}
  
 \typeout{Document Class "cernphprep" 1.04 (6 June 2010)}
